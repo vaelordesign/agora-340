@@ -10,7 +10,7 @@ Onglet « Express 25 min », vue par défaut à l'ouverture (`parts/f-express.ht
 ## Ouvrir
 - Double-cliquer sur `agora-340.html` : ça marche sans Internet sauf pour les polices (Google Fonts).
 - **En ligne, sans compte** : https://vaelordesign.github.io/agora-340/ (dépôt public `vaelordesign/agora-340`, GitHub Pages servi depuis `docs/`; page en noindex, donc pas dans Google).
-- Ou la version Artifact (privée) : https://claude.ai/artifact/Q5yBEDB5cAfJLYDPLvAPW4
+- Ou la version Artifact (privée) : https://claude.ai/artifact/Q5yBEDB5cAfJLYDPLvAPW4 (restée à la version 1, sans la révision express : utiliser l'adresse GitHub Pages).
 - La progression (fiches cochées, questions ratées, examens blancs) reste dans le navigateur (localStorage, clé `agora-340`). Aucun compte, aucun serveur.
 
 ## Ce qu'il y a dedans
