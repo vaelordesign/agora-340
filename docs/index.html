@@ -241,6 +241,34 @@ textarea{width:100%;min-height:110px;font-family:var(--f-body);font-size:16px;li
 .stat-line{font-family:var(--f-ui);font-size:13px;color:var(--muted);margin-top:10px}
 .empty{color:var(--muted);font-style:italic}
 
+/* ---------- express ---------- */
+.xwrap{max-width:860px;margin:0 auto;padding:26px 20px 90px}
+.xhead{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:12px}
+.xhead h2{font-size:40px;margin-top:6px}
+.xwrap .lead{max-width:70ch}
+.xplan{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:16px 0 8px;font-family:var(--f-ui);font-size:13px}
+.xplan a{border:1px solid var(--line);border-radius:6px;padding:10px 12px;background:var(--surface);color:var(--ink-2);text-decoration:none;line-height:1.3}
+.xplan a:hover{border-color:var(--accent-line);background:var(--accent-soft)}
+.xplan b{display:block;color:var(--accent);font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;margin-bottom:3px}
+.xblock{border-top:1px solid var(--line);padding:30px 0 12px;margin-top:22px;scroll-margin-top:72px}
+.xblock h3{font-size:28px;margin:0 0 4px}
+.xblock h4{font-family:var(--f-ui);font-size:12.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-2);margin:26px 0 8px}
+.xtime{font-family:var(--f-ui);font-size:12px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px}
+.qa{display:grid;grid-template-columns:200px minmax(0,1fr);gap:10px 18px;margin:8px 0 18px;font-size:15.5px}
+.qa dt{font-weight:600;color:var(--ink);padding-top:1px;line-height:1.35}
+.qa dd{margin:0;color:var(--ink-2);line-height:1.5}
+.qa dd b{color:var(--ink);font-weight:600}
+.qa dt,.qa dd{padding-bottom:8px;border-bottom:1px solid var(--line-2)}
+.xtbl table{font-size:14.5px;min-width:560px}
+.xtbl td:first-child{font-weight:600;white-space:nowrap}
+.xtbl td:first-child .tnum{font-weight:400;color:var(--muted);font-size:12.5px;display:block}
+.xtbl td:last-child{color:var(--warm)}
+.xblock ul li b{font-weight:600}
+.plan{border:1px solid var(--line);border-radius:6px;padding:12px 16px 10px;margin:0 0 12px;background:var(--surface);font-size:15px}
+.plan b.t{font-family:var(--f-display);font-size:20px;display:block;margin-bottom:6px;font-weight:400}
+.plan p{margin:0 0 5px;max-width:none}
+.plan p b{font-weight:600}
+
 /* ---------- responsive ---------- */
 @media (max-width:900px){
   .wrap{grid-template-columns:minmax(0,1fr);gap:20px}
@@ -262,11 +290,16 @@ textarea{width:100%;min-height:110px;font-family:var(--f-body);font-size:16px;li
   .qtext{font-size:19px}
   body{font-size:16px}
   .bygroup li{grid-template-columns:1fr 50px 90px}
+  .xplan{grid-template-columns:1fr 1fr}
+  .qa{grid-template-columns:1fr;gap:2px 0}
+  .qa dt{padding-top:8px;border-bottom:0;padding-bottom:2px}
+  .xhead h2{font-size:32px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 @media print{
-  .topbar,.toc,.toc-btn,.sec-actions,#view-quiz,#view-exam,#view-cards{display:none!important}
-  .view{display:none} #view-fiches{display:block!important}
+  .topbar,.toc,.toc-btn,.sec-actions,.express-actions,#view-quiz,#view-exam,#view-cards{display:none!important}
+  .view{display:none} .view.on{display:block!important}
+  .xwrap{padding:0;max-width:none} .xblock{break-inside:auto} .plan,.qa dt,.qa dd{break-inside:avoid}
   body{background:#fff;color:#000;font-size:11.5pt}
   .wrap{display:block;padding:0;max-width:none}
   .article{max-width:none}
@@ -279,6 +312,144 @@ textarea{width:100%;min-height:110px;font-family:var(--f-body);font-size:16px;li
 
 </head>
 <body>
+
+<!-- ============================================================ EXPRESS -->
+<section class="view on" id="view-express">
+<div class="xwrap">
+  <div class="xhead">
+    <div>
+      <div class="eyebrow">Révision express · Test de compréhension 1</div>
+      <h2>25 minutes avant le test</h2>
+    </div>
+    <div class="row express-actions"><button type="button" class="btn" id="x-chrono">Lancer le chrono</button><span class="timer" id="x-timer" hidden>00:00</span></div>
+  </div>
+  <p class="lead">Tout ce qui suit est classé selon les trois formats de l'examen. Lis dans l'ordre, sans revenir en arrière. Si un point te semble flou, la fiche complète est un clic plus loin, mais ne t'y perds pas.</p>
+  <div class="xplan">
+    <a href="#xa"><b>Bloc A · 7 min</b>Choix multiples : reconnaître</a>
+    <a href="#xb"><b>Bloc B · 10 min</b>Réponses courtes : savoir écrire</a>
+    <a href="#xc"><b>Bloc C · 5 min</b>Développement : les plans</a>
+    <a href="#xd"><b>Bloc D · 3 min</b>Mini-test pour vérifier</a>
+  </div>
+
+  <!-- ------------------------------------------------ BLOC A -->
+  <div class="xblock" id="xa">
+    <h3>Bloc A · Choix multiples : reconnaître</h3>
+    <div class="xtime">7 minutes · un nom, une idée, un piège</div>
+    <div class="tbl-wrap xtbl"><table>
+      <tr><th>Qui</th><th>À associer</th><th>Le piège</th></tr>
+      <tr><td>Homère</td><td>Écrit les mythes; Iliade et Odyssée</td><td>Ce n'est PAS lui qui a écrit la Théogonie</td></tr>
+      <tr><td>Hésiode</td><td>Théogonie (Chaos, Gaïa, Éros; Zeus roi) et Les Travaux et les Jours (Prométhée, Pandore, jarre; races or, argent, bronze, héros, fer)</td><td>Une jarre, pas une boîte; les héros avant le fer</td></tr>
+      <tr><td>Pythagore <span class="tnum">580-495</span></td><td>« Tout est nombre »; chef d'un culte; justice 9, âme 1, monde 10, temps 7</td><td>Figure quasi légendaire, pas un scientifique</td></tr>
+      <tr><td>Xénophane <span class="tnum">540-475</span></td><td>Critique l'anthropomorphisme et l'immoralisme des dieux d'Homère et Hésiode; dieu unique, immobile, rationnel; « lumières grecques »</td><td>Sceptique, mais pas athée</td></tr>
+      <tr><td>Héraclite <span class="tnum">540-480</span></td><td>Le feu; tout change; sens trompeurs; le logos capte la loi stable du changement</td><td>Opposé de Parménide</td></tr>
+      <tr><td>Parménide <span class="tnum">510-440</span></td><td>Poème De la nature; l'Être un, immobile, éternel; 3 voies : vérité, non-être (impossible), semblant (illusion)</td><td>Opposé d'Héraclite</td></tr>
+      <tr><td>Démocrite <span class="tnum">460-370</span></td><td>Atomes (forme, ordre, grandeur) et vide; le hasard, pas dieu; Aristote le prend au sérieux mais s'y oppose</td><td>Moqué à son époque</td></tr>
+      <tr><td>Solon <span class="tnum">v. 640-558</span></td><td>Père de la démocratie; abolit les dettes; libère les esclaves grecs; aristocratie de fortune remplace celle de naissance</td><td>La 3<sup>e</sup> réforme est la plus significative</td></tr>
+      <tr><td>Clisthène</td><td>10 tribus; 1 stratège ÉLU par an; 50 conseillers TIRÉS AU SORT par tribu; 500 juges par tribu; ostracisme</td><td>Élu et tiré au sort ne sont pas interchangeables</td></tr>
+      <tr><td>Platon</td><td>Aristocratie → timocratie → oligarchie → démocratie → tyrannie; La République; L'Apologie; Théétète</td><td>La démocratie dérive en tyrannie par excès de liberté</td></tr>
+      <tr><td>Aristote</td><td>L'humain est « l'animal doué de logos »</td><td>Pas Platon</td></tr>
+      <tr><td>Protagoras</td><td>Agnostique; contrat d'entraide; justice = légalité; rhétorique; discours double; le bien devient l'utile, la vérité la vraisemblance</td><td>Il DÉFEND la loi, pas la loi du plus fort</td></tr>
+      <tr><td>Antiphon</td><td>La loi est une invention des faibles pour freiner les forts</td><td>Sophiste</td></tr>
+      <tr><td>Thrasymaque</td><td>La justice est la loi du plus fort; le faible obéit par peur des représailles</td><td>Dans La République</td></tr>
+      <tr><td>Glaucon</td><td>Le berger du roi de Lydie : personne ne reste juste sans conséquences; la loi n'est jamais respectée volontairement</td><td>Dans La République</td></tr>
+      <tr><td>Calliclès</td><td>« L'homme le plus juste est le tyran le plus cruel »; les forts doivent mépriser la loi</td><td>Riche aristocrate</td></tr>
+      <tr><td>Socrate <span class="tnum">470-399</span></td><td>Questionne, ne vend rien; ignorance simple; elenchos, maïeutique, aporie; vertu-science; justice = ne jamais commettre le mal; accepte sa mort</td><td>N'a rien écrit : tout vient de Platon</td></tr>
+      <tr><td>Euthyphron</td><td>Devin; accuse son père; « Qu'est-ce que la piété ? »; le dilemme</td><td>Finit en aporie, il s'enfuit</td></tr>
+    </table></div>
+
+    <h4>Les citations et leur auteur</h4>
+    <dl class="qa">
+      <dt>« Tout est nombre »</dt><dd>Pythagore</dd>
+      <dt>« L'opinion se rapporte à ce qui devient et change, la science à ce qui est »</dt><dd>Platon, La République V (la doxa)</dd>
+      <dt>« Animal doué de logos »</dt><dd>Aristote</dd>
+      <dt>« La vie sans examen ne vaut pas la peine d'être vécue »</dt><dd>Platon, L'Apologie de Socrate</dd>
+      <dt>« Je suis plus sage que cet homme; car il croit savoir ce qu'il ne sait pas… »</dt><dd>L'Apologie (l'ignorance socratique)</dd>
+      <dt>« Ce n'est pas moi qui réfute, mais la vérité qui apparaît par nos paroles »</dt><dd>L'Apologie (l'elenchos)</dd>
+      <dt>« Mon art est semblable à celui des sages-femmes… »</dt><dd>Platon, Théétète (la maïeutique)</dd>
+      <dt>« La justice est la vertu qui nous dicte de ne jamais commettre le mal »</dt><dd>Socrate</dd>
+      <dt>« L'homme le plus juste est le tyran le plus cruel »</dt><dd>Calliclès</dd>
+      <dt>« Si chacun ne veille qu'à son unique intérêt, la démocratie risque de dégénérer en tyrannie et en loi du plus fort »</dt><dd>Laramée, le manuel, p. 134</dd>
+    </dl>
+
+    <h4>Les vrai ou faux qui piègent</h4>
+    <ul>
+      <li>Rationnel et irrationnel ne veulent pas dire vrai et faux : l'art, la religion et la poésie donnent aussi accès à des vérités. <b>Faux</b> si on te dit le contraire.</li>
+      <li>La pensée rationnelle n'a pas supprimé la pensée mythique : c'est un <b>ajout</b> d'outils.</li>
+      <li>La démocratie athénienne est <b>directe</b>, pas représentative.</li>
+      <li>Les textes des présocratiques nous sont parvenus en <b>fragments</b>, pas complets.</li>
+      <li>Les sophistes n'étaient <b>pas tous d'accord</b> : Protagoras obéit à la loi, les autres suivent la nature.</li>
+      <li>Socrate ne se fait <b>pas payer</b> et distingue le juste du légal; pour Protagoras, justice et légalité sont <b>synonymes</b>.</li>
+      <li>L'aporie n'est pas une méthode qu'on applique, c'est l'<b>impasse</b> vécue par l'interlocuteur.</li>
+      <li>Le dialogue d'Euthyphron ne donne <b>aucune</b> définition finale de la piété.</li>
+    </ul>
+  </div>
+
+  <!-- ------------------------------------------------ BLOC B -->
+  <div class="xblock" id="xb">
+    <h3>Bloc B · Réponses courtes : savoir écrire</h3>
+    <div class="xtime">10 minutes · vingt réponses que tu dois pouvoir écrire de mémoire</div>
+    <dl class="qa">
+      <dt>La philosophie</dt><dd><b>Réflexion critique et rationnelle en quête de sens sur l'existence humaine et sur le monde.</b> Critique : on remet en question, pas de réponses toutes faites. Rationnelle : par la raison, contre l'émotif et l'impulsif. Quête de sens : de notre existence et du monde.</dd>
+      <dt>La raison</dt><dd>Faculté humaine de <b>connaître, juger et agir</b> selon des principes clairs qui peuvent être <b>justifiés logiquement</b>. Sa naissance comme explication du réel = naissance de la philosophie, source des sciences modernes.</dd>
+      <dt>Philo-sophia et les branches</dt><dd>Désir de la sagesse : on la désire parce qu'on ne l'a pas, donc un <b>état d'être</b>, pas un corps de connaissances. Deux sortes : celle commune à toute l'humanité, et l'académique en <b>5 branches : métaphysique, esthétique, logique, éthique, épistémologie</b>.</dd>
+      <dt>Science et philosophie</dt><dd>Science = <b>progrès</b> (le nouveau remplace l'ancien), savoir <b>concret, pratique, empirique</b>. Philosophie = <b>questions éternelles</b>, savoir <b>conceptuel</b>.</dd>
+      <dt>Mythe et philosophie</dt><dd>Principes <b>externes (transcendance) / internes (immanence)</b>; étude du <b>surnaturel / de la nature</b>; <b>plusieurs principes / économie des principes</b>. Le mythe : tradition orale, origine des humains, cause des phénomènes, êtres surnaturels, modèles moraux, organise le temps, donne du sens.</dd>
+      <dt>Les présocratiques</dt><dd>3 innovations : <b>principes internes</b> à la nature dont on fait l'expérience; la nature est un tout <b>ordonné et intelligible</b> en elle-même; explications <b>économiques</b> (un seul principe pour tout). Méthode : observation + raisonnement, textes argumentatifs, spéculation sans outils. Anticipé : Big Bang, évolution, atome, conservation de l'énergie. Premiers scientifiques (réflexion purement théorique), sauf méthode (aucun outil) et intérêts (théologie, ontologie, morale).</dd>
+      <dt>Principe premier de chacun</dt><dd>Pythagore : le <b>nombre</b>. Xénophane : un <b>dieu unique</b> rationnel. Héraclite : le <b>feu</b>. Parménide : l'<b>Être</b>. Démocrite : les <b>atomes et le vide</b>.</dd>
+      <dt>Doxa et logos</dt><dd>Doxa : <b>opinion non examinée</b>, fondée sur l'apparence, l'habitude ou l'autorité, sans justification rationnelle universelle. Logos : <b>discours structuré par la raison</b>, capable de se justifier, visant l'universel. Opinion/raison, apparence/essence, persuasion/justification, relatif/universel.</dd>
+      <dt>La démocratie athénienne</dt><dd>Justice divine → justice humaine quand la classe commerçante réclame des <b>lois écrites</b>. Démocratie <b>directe</b> : l'<b>Assemblée du peuple</b> nomme et surveille les magistrats, vote toutes les lois, administre la justice; tirage au sort pour faire circuler le pouvoir; lois au-dessus de tous; liberté valorisée. Fin du 5<sup>e</sup> siècle : des riches poussent le peuple à des <b>décrets contraires aux lois</b> → désordre.</dd>
+      <dt>Les sophistes</dt><dd>Enseignants <b>professionnels, itinérants, rémunérés</b>; but : réussir dans la vie publique (politique, tribunaux) par l'efficacité du discours; l'humain et le langage au centre, normes pragmatiques; <b>premiers humanistes</b>. Pas tous d'accord sur la justice.</dd>
+      <dt>Théorie du développement des sociétés</dt><dd>État primitif sauvage et égoïste → lent apprentissage → <b>contrat d'entraide mutuelle</b> → obéissance aux lois qui garantissent <b>sécurité et égalité</b> → l'éducation fait rejeter la nature querelleuse. Donc supériorité de la convention pour éviter la tyrannie des puissants.</dd>
+      <dt>Subjectivisme et relativisme</dt><dd>3 prémisses : la nature n'offre <b>rien de stable</b> aux perceptions; <b>la science est la sensation</b>; <b>tout est subjectif</b>. Conséquences : pas de justice objective ni universelle; <b>justice = légalité</b>; la loi est juste <b>tant que la majorité la croit telle</b>; il faut respecter la convention. Relativisme de la vérité (chacun la sienne), de la justice (= la loi), de la moralité (le bien = l'utile).</dd>
+      <dt>Le pragmatisme</dt><dd>Si chacun s'invente sa justice, guerre d'intérêts. L'homme d'État doit donc maîtriser la <b>rhétorique</b> pour faire adopter les opinions les plus <b>utiles</b>, même des fictions, afin de garder la cohésion. <b>Le bien est remplacé par l'utile, la vérité par la vraisemblance.</b> Discours double : louer et blâmer les deux positions, pour que l'argument le plus faible l'emporte.</dd>
+      <dt>La loi du plus fort</dt><dd>Même point de départ (nature contre loi), conclusion inverse : la loi n'est qu'une convention artificielle, donc désobéir quand on ne risque rien. Antiphon (invention des faibles), Thrasymaque (le fort commande dans son intérêt, le faible obéit par peur), Glaucon (berger de Lydie), Calliclès (le tyran le plus cruel est le plus juste). Deux camps chez les sophistes : Protagoras pour la loi, les autres pour la nature.</dd>
+      <dt>L'approche de Socrate</dt><dd>Il <b>ne vend pas</b> de savoir, <b>ne promet pas</b> le succès, <b>ne donne pas</b> de recettes, il <b>questionne</b>. Rejet du relativisme : définitions universelles, essence des concepts, bien non arbitraire. Ignorance <b>simple</b> (je sais que je ne sais pas, la bonne posture) contre ignorance <b>qui s'ignore</b> (croire savoir). La philosophie commence par la conscience de son ignorance.</dd>
+      <dt>Les trois méthodes</dt><dd><b>Elenchos</b> (réfutation) : définition proposée → acceptation provisoire → questionnement → contradiction révélée. <b>Maïeutique</b> : faire émerger la vérité chez l'interlocuteur, comme une sage-femme. <b>Aporie</b> : impasse; l'interlocuteur ne sait plus ce qu'il croyait savoir; détruit l'illusion du savoir. Discussion réfutative : deux rôles, l'un questionne, l'autre défend.</dd>
+      <dt>L'Euthyphron</dt><dd>Devant le tribunal, avant le procès; Euthyphron accuse son père. Question : <b>qu'est-ce que la piété ?</b> Définitions rejetées : « ce que je fais » (un exemple, pas une définition); « ce qui plaît aux dieux » (ils se contredisent). Dilemme : <b>le pieux est-il aimé des dieux parce qu'il est pieux, ou pieux parce que les dieux l'aiment ?</b> Si aimé parce que pieux, la piété existe sans eux; si pieux parce qu'aimé, elle est arbitraire. Fin : aporie.</dd>
+      <dt>La vertu-science</dt><dd>Lien étroit entre <b>action bonne et connaissance rationnelle du bien</b>, ni relative ni majoritaire. Le bien est <b>inné</b> dans l'âme; les préjugés le cachent, il faut désapprendre (degré zéro du savoir). Donc <b>le mal vient de l'ignorance</b> : qui connaît le bien agit bien, car la vertu apporte le bonheur. Soigner son âme plutôt que son corps.</dd>
+      <dt>Le procès</dt><dd><b>399</b>; accusé de <b>corrompre la jeunesse</b> et d'<b>introduire de nouvelles divinités</b>. Réponses : faire gagner l'argument faible → on le confond avec les sophistes; être payé → la vertu ne se troque pas contre l'argent; rendre les jeunes athées → il respecte les dieux de la cité. Procès <b>politique</b> : on lui reproche de critiquer la démocratie, alors qu'il critiquait ce qui l'empêchait de fonctionner (des citoyens non vertueux qui ne savent pas ce qu'est la justice).</dd>
+      <dt>La justice et les lois</dt><dd>Socrate distingue le <b>juste</b> et le <b>légal</b>. Définition : <b>la vertu qui nous dicte de ne jamais commettre le mal</b>; « jamais » est absolu (répondre au mal par le mal = devenir méchant, se nuire à soi-même, rendre les méchants pires). Donc ne <b>jamais désobéir</b> aux lois, copies imparfaites de la justice, sinon chaos. Il accepte sa mort plutôt que de se placer au-dessus des lois.</dd>
+    </dl>
+  </div>
+
+  <!-- ------------------------------------------------ BLOC C -->
+  <div class="xblock" id="xc">
+    <h3>Bloc C · Développement : les plans</h3>
+    <div class="xtime">5 minutes · une méthode, quatre plans prêts</div>
+    <div class="retenir">
+      <span class="blabel">La recette d'une bonne réponse longue</span>
+      <p><b>Introduction</b> en trois temps : sujet amené (le contexte), sujet posé (la question), sujet divisé (ce que tu vas faire). Puis <b>une position claire</b>, <b>deux arguments</b> (chacun : affirmation + explication + exemple), <b>une objection</b> que tu réfutes, et une phrase de conclusion. Nomme toujours <b>un philosophe</b> par argument : ça vaut des points.</p>
+    </div>
+    <div class="plan"><b class="t">La démocratie athénienne est-elle juste ?</b>
+      <p><b>Pour :</b> le pouvoir circule (tirage au sort, ostracisme) et les lois sont au-dessus de tous; tout citoyen parle et vote à l'Assemblée.</p>
+      <p><b>Objection :</b> « citoyen » exclut femmes, esclaves et étrangers; les sophistes poussent le peuple à des décrets contraires aux lois; Platon : la démocratie dégénère en tyrannie par excès de liberté.</p></div>
+    <div class="plan"><b class="t">Respecterait-on les lois sans conséquences ?</b>
+      <p><b>Glaucon dit non :</b> le berger de Lydie; la vitesse sans radar; la loi n'est jamais respectée volontairement (Thrasymaque : par peur des représailles).</p>
+      <p><b>Socrate dit oui :</b> commettre le mal nous rend semblables aux méchants et nuit à notre âme; celui qui connaît le bien le choisit même sans témoin (vertu-science). Exemple : rapporter un portefeuille trouvé.</p></div>
+    <div class="plan"><b class="t">Une action est-elle bonne parce qu'une autorité l'approuve ?</b>
+      <p><b>Position :</b> non, pour des raisons indépendantes (deuxième branche du dilemme d'Euthyphron).</p>
+      <p><b>Argument :</b> sinon la même action serait bonne ou mauvaise selon qui commande, et on ne pourrait jamais critiquer une loi injuste; or on le fait, donc il existe un critère extérieur (Socrate : le bien a une essence). <b>Exemple :</b> la ségrégation était légale et approuvée, on la juge injuste. <b>Contre :</b> Protagoras, le juste est ce que la majorité décide.</p></div>
+    <div class="plan"><b class="t">Est-il justifié d'aller à l'encontre d'une loi ?</b>
+      <p><b>Position :</b> oui si la loi est injuste (le juste diffère du légal), mais ouvertement et en acceptant les conséquences, sinon c'est la loi du plus fort.</p>
+      <p><b>Exemple :</b> Rosa Parks. <b>Contre-exemple :</b> Socrate refuse de fuir la prison, car désobéir en secret, c'est se placer au-dessus des lois et commettre le mal contre la cité.</p></div>
+    <div class="plan"><b class="t">Sophistes contre Socrate (si on te demande de comparer)</b>
+      <p><b>Vérité :</b> relative, subjective / universelle, essence. <b>Justice :</b> légalité ou loi du plus fort / ne jamais commettre le mal, juste ≠ légal. <b>Savoir :</b> se vend, recettes / se questionne. <b>Discours :</b> persuasion, vraisemblance / justification, réfutation. <b>But :</b> l'utile, le succès / le bien, l'âme. Point commun : les deux quittent la nature pour l'humain.</p></div>
+  </div>
+
+  <!-- ------------------------------------------------ BLOC D -->
+  <div class="xblock" id="xd">
+    <h3>Bloc D · Mini-test</h3>
+    <div class="xtime">3 minutes · douze questions tirées au hasard, corrigées une par une</div>
+    <div class="row express-actions">
+      <button type="button" class="btn primary" data-express="mix">12 choix multiples et vrai ou faux</button>
+      <button type="button" class="btn" data-express="courte">4 réponses courtes à écrire</button>
+      <a class="btn ghost" href="#fiches">Les fiches complètes</a>
+    </div>
+    <p class="stat-line" style="margin-top:14px">Si tu rates plus de 3 questions sur 12, refais le mini-test une fois après avoir relu la ligne correspondante du bloc A ou B. Sinon, arrête là : tu es prêt.</p>
+  </div>
+</div>
+</section>
+
 <header class="topbar">
   <div class="topbar-in">
     <div class="brand">
@@ -286,7 +457,8 @@ textarea{width:100%;min-height:110px;font-family:var(--f-body);font-size:16px;li
       <span class="sub">Philosophie et rationalité · Test de compréhension 1</span>
     </div>
     <nav class="tabs" role="tablist" aria-label="Sections">
-      <button class="tab" role="tab" data-view="fiches" aria-selected="true">Fiches</button>
+      <button class="tab" role="tab" data-view="express" aria-selected="true">Express 25 min</button>
+      <button class="tab" role="tab" data-view="fiches" aria-selected="false">Fiches</button>
       <button class="tab" role="tab" data-view="quiz" aria-selected="false">Quiz <span class="n" id="n-quiz"></span></button>
       <button class="tab" role="tab" data-view="exam" aria-selected="false">Examen blanc</button>
       <button class="tab" role="tab" data-view="cards" aria-selected="false">Cartes éclair</button>
@@ -295,7 +467,7 @@ textarea{width:100%;min-height:110px;font-family:var(--f-body);font-size:16px;li
 </header>
 
 <!-- ============================================================ FICHES -->
-<section class="view on" id="view-fiches">
+<section class="view" id="view-fiches">
 <div class="wrap">
 <aside class="toc" id="toc" aria-label="Sommaire des fiches">
   <div class="toc-progress"><span id="toc-pct">0 fiche maîtrisée sur 20</span><div class="bar"><i id="toc-bar"></i></div></div>
@@ -1702,7 +1874,7 @@ function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').rep
 function fmtScore(x){ return (Math.round(x*10)/10).toString().replace('.',','); }
 
 // ---------------- navigation
-const VIEWS=['fiches','quiz','exam','cards'];
+const VIEWS=['express','fiches','quiz','exam','cards'];
 function showView(v){
   VIEWS.forEach(x=>$('#view-'+x).classList.toggle('on',x===v));
   $$('.tab').forEach(t=>t.setAttribute('aria-selected', t.getAttribute('data-view')===v ? 'true':'false'));
@@ -1712,8 +1884,9 @@ function showView(v){
 }
 $$('.tab').forEach(t=>t.addEventListener('click',()=>{ location.hash='#'+t.getAttribute('data-view'); }));
 function route(){
-  const h=(location.hash||'#fiches').slice(1);
-  if(VIEWS.indexOf(h)>=0){ showView(h); if(h==='fiches') window.scrollTo(0,0); return; }
+  const h=(location.hash||'#express').slice(1);
+  if(VIEWS.indexOf(h)>=0){ showView(h); if(h==='fiches'||h==='express') window.scrollTo(0,0); return; }
+  if(/^x[a-d]$/.test(h) && $('#'+h)){ showView('express'); setTimeout(()=>{ $('#'+h).scrollIntoView({block:'start'}); },0); return; }
   if(/^s\d+$/.test(h) && $('#'+h)){ showView('fiches'); $('#toc').classList.remove('open'); setTimeout(()=>{ $('#'+h).scrollIntoView({block:'start'}); },0); return; }
   showView('fiches');
 }
@@ -1986,6 +2159,19 @@ function renderCard(){
   $('#c-quit').addEventListener('click',()=>{ deck=null; renderCardsSetup(); });
   $('#c-card').focus({preventScroll:true});
 }
+
+// ---------------- révision express
+$$('[data-express]').forEach(b=>b.addEventListener('click',()=>{
+  const all=GROUPS.reduce((a,g)=>a.concat(g.s),[]);
+  if(b.getAttribute('data-express')==='mix') startQuiz({sections:all,types:['qcm','vf'],n:12,prio:false,label:'Mini-test express'});
+  else startQuiz({sections:all,types:['courte'],n:4,prio:false,label:'Mini-test express'});
+  location.hash='#quiz';
+}));
+(function(){ const btn=$('#x-chrono'), out=$('#x-timer'); if(!btn) return; let t0=null, id=null;
+  btn.addEventListener('click',()=>{ if(id){ clearInterval(id); id=null; btn.textContent='Relancer le chrono'; return; }
+    t0=Date.now(); out.hidden=false; btn.textContent='Arrêter le chrono';
+    id=setInterval(()=>{ const s=Math.floor((Date.now()-t0)/1000); const m=Math.floor(s/60); out.textContent=(m<10?'0':'')+m+':'+(s%60<10?'0':'')+(s%60); out.classList.toggle('low',m>=25); },1000); });
+})();
 
 // ---------------- démarrage
 refreshMastery(); updateBadge();

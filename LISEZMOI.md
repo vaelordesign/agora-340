@@ -3,6 +3,10 @@
 Fait le 14 septembre 2026 à partir des 8 PDF du dossier `Grasset Session 1\Philo`
 (Cours 1, 2, 3, 4, 5, 7, Socrate_et_les_sophistes, Guide_de_revision).
 
+## Révision express (ajoutée le 16 sept. 2026)
+
+Onglet « Express 25 min », vue par défaut à l'ouverture (`parts/f-express.html`). Tout le contenu condensé selon les trois formats de l'examen : bloc A (7 min, choix multiples : tableau qui/quoi/piège, citations, vrai ou faux pièges), bloc B (10 min, vingt réponses courtes à savoir écrire), bloc C (5 min, méthode + quatre plans de développement + comparaison sophistes/Socrate), bloc D (mini-test de 12 QCM ou 4 courtes tirés de la banque). Chrono intégré qui passe en rouge à 25 min.
+
 ## Ouvrir
 - Double-cliquer sur `agora-340.html` : ça marche sans Internet sauf pour les polices (Google Fonts).
 - **En ligne, sans compte** : https://vaelordesign.github.io/agora-340/ (dépôt public `vaelordesign/agora-340`, GitHub Pages servi depuis `docs/`; page en noindex, donc pas dans Google).

@@ -28,7 +28,7 @@ function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').rep
 function fmtScore(x){ return (Math.round(x*10)/10).toString().replace('.',','); }
 
 // ---------------- navigation
-const VIEWS=['fiches','quiz','exam','cards'];
+const VIEWS=['express','fiches','quiz','exam','cards'];
 function showView(v){
   VIEWS.forEach(x=>$('#view-'+x).classList.toggle('on',x===v));
   $$('.tab').forEach(t=>t.setAttribute('aria-selected', t.getAttribute('data-view')===v ? 'true':'false'));
@@ -38,8 +38,9 @@ function showView(v){
 }
 $$('.tab').forEach(t=>t.addEventListener('click',()=>{ location.hash='#'+t.getAttribute('data-view'); }));
 function route(){
-  const h=(location.hash||'#fiches').slice(1);
-  if(VIEWS.indexOf(h)>=0){ showView(h); if(h==='fiches') window.scrollTo(0,0); return; }
+  const h=(location.hash||'#express').slice(1);
+  if(VIEWS.indexOf(h)>=0){ showView(h); if(h==='fiches'||h==='express') window.scrollTo(0,0); return; }
+  if(/^x[a-d]$/.test(h) && $('#'+h)){ showView('express'); setTimeout(()=>{ $('#'+h).scrollIntoView({block:'start'}); },0); return; }
   if(/^s\d+$/.test(h) && $('#'+h)){ showView('fiches'); $('#toc').classList.remove('open'); setTimeout(()=>{ $('#'+h).scrollIntoView({block:'start'}); },0); return; }
   showView('fiches');
 }
@@ -312,6 +313,19 @@ function renderCard(){
   $('#c-quit').addEventListener('click',()=>{ deck=null; renderCardsSetup(); });
   $('#c-card').focus({preventScroll:true});
 }
+
+// ---------------- révision express
+$$('[data-express]').forEach(b=>b.addEventListener('click',()=>{
+  const all=GROUPS.reduce((a,g)=>a.concat(g.s),[]);
+  if(b.getAttribute('data-express')==='mix') startQuiz({sections:all,types:['qcm','vf'],n:12,prio:false,label:'Mini-test express'});
+  else startQuiz({sections:all,types:['courte'],n:4,prio:false,label:'Mini-test express'});
+  location.hash='#quiz';
+}));
+(function(){ const btn=$('#x-chrono'), out=$('#x-timer'); if(!btn) return; let t0=null, id=null;
+  btn.addEventListener('click',()=>{ if(id){ clearInterval(id); id=null; btn.textContent='Relancer le chrono'; return; }
+    t0=Date.now(); out.hidden=false; btn.textContent='Arrêter le chrono';
+    id=setInterval(()=>{ const s=Math.floor((Date.now()-t0)/1000); const m=Math.floor(s/60); out.textContent=(m<10?'0':'')+m+':'+(s%60<10?'0':'')+(s%60); out.classList.toggle('low',m>=25); },1000); });
+})();
 
 // ---------------- démarrage
 refreshMastery(); updateBadge();
