@@ -58,8 +58,9 @@ function showResult(p){
   const r=$('#d-result'); r.hidden=false;
   r.innerHTML='<h4 style="margin-top:22px">Grille d\'autocorrection</h4><ul class="dcheck">'+CHECK.map((c,i)=>'<li><input type="checkbox" id="dc'+i+'"><label for="dc'+i+'">'+c+'</label></li>').join('')+'</ul>'+
     '<p class="stat-line" id="d-score"></p>'+
-    '<div class="model"><span class="blabel">Les deux positions modèles</span><div class="plan" style="border:0;padding:0;margin:0;background:transparent">'+p.html.replace(/<b class="t">[\s\S]*?<\/b>/,'')+'</div></div>'+
+    '<div class="model"><span class="blabel">Les arguments modèles, deux positions</span><div class="plan" style="border:0;padding:0;margin:0;background:transparent">'+p.html.replace(/<b class="t">[\s\S]*?<\/b>/,'')+'</div></div>'+
     '<div class="row" style="margin-top:14px"><button type="button" class="btn primary" id="d-next">Autre sujet</button><a class="btn ghost" href="#dth">Relire les sujets</a></div>';
+  $$('details',r).forEach(d=>{ d.open=true; });
   const upd=()=>{ const n=$$('.dcheck input',r).filter(i=>i.checked).length; $('#d-score').textContent=n+' critère'+(n>1?'s':'')+' sur '+CHECK.length+(n>=9?' : prêt.':n>=7?' : solide, corrige les cases vides.':' : reprends les cases vides avant le prochain sujet.'); };
   $$('.dcheck input',r).forEach(i=>i.addEventListener('change',upd)); upd();
   if(st.done.indexOf(p.id)<0){ st.done.push(p.id); save(); hist(); }

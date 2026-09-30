@@ -3,9 +3,9 @@
 Fait le 14 septembre 2026 à partir des 8 PDF du dossier `Grasset Session 1\Philo`
 (Cours 1, 2, 3, 4, 5, 7, Socrate_et_les_sophistes, Guide_de_revision).
 
-## Dissertation (ajoutée le 30 sept. 2026, jour de l'intra)
+## Dissertation (30 sept. 2026, jour de l'intra)
 
-Onglet « Dissertation », vue par défaut (`parts/g-dissert.html`, CSS dans `parts/a-dissert.css` injecté par build.js, moteur d'entraînement `parts/h-dissert.js`, clé localStorage `agora-340-dissert`). L'intra vaut 25 % : dissertation partielle de 500 mots, UN paragraphe de développement structuré argument 1 → objection → réfutation → argument 2 → objection → réfutation (cours 11 : « thèse, objection, réfutation »), 8 thématiques. La page donne : le format avec phrases d'amorce, budget mots/temps et erreurs relevées par la prof; pour chaque thématique un encadré « ce qu'il faut savoir », le sujet le plus probable (ids p1 à p8) avec les DEUX positions (conseillée et inverse) et deux arguments complets chacune (32 blocs); un texte modèle d'environ 520 mots en un paragraphe avec segments colorés; un entraînement (sujet au hasard ou choisi, chrono 10 min plan / 90 min texte, brouillon sauvegardé, grille de 10 critères, les deux positions modèles).
+Onglet « Dissertation », vue par défaut (`parts/g-dissert.html`, CSS `parts/a-dissert.css` injecté par build.js, moteur `parts/h-dissert.js`, clé localStorage `agora-340-dissert`). L'intra vaut 25 % : dissertation partielle de 500 mots, UN paragraphe de développement structuré argument 1 → objection → réfutation → argument 2 → objection → réfutation, 8 thématiques (cours 11). Version courte demandée par Julien : pour chaque sujet (ids p1 à p8), 3 lignes « à savoir », puis la position conseillée avec 2 cartes d'argument (`.acard` : mémo d'une ligne en gras, objection et réfutation en une ligne, explication repliée dans `<details class="expl">`), et la position inverse repliée (`<details class="inv">`). Format en six blocs, texte modèle d'environ 520 mots replié, entraînement (chrono 10 min plan / 90 min texte, grille de 10 critères, replis ouverts automatiquement dans le résultat).
 
 ## Révision express (ajoutée le 16 sept. 2026)
 
