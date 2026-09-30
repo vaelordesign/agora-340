@@ -76,3 +76,6 @@ details.more > *:not(summary){margin-top:8px}
   .fmt > div{grid-template-columns:1fr;gap:2px}
   .ak{grid-template-columns:1fr;gap:2px}
 }
+
+.why{font-size:14.5px;color:var(--ink-2);margin:4px 0 8px;line-height:1.55;max-width:none}
+.why + .ak{border-top:1px dashed var(--line-2);padding-top:8px}
