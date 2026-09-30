@@ -308,11 +308,13 @@ textarea{width:100%;min-height:110px;font-family:var(--f-body);font-size:16px;li
 .tor{display:grid;gap:10px;margin:14px 0 20px}
 .tor > div{border:1px solid var(--line);border-radius:6px;padding:12px 16px 8px;background:var(--surface)}
 .tor .lab{font-family:var(--f-ui);font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:6px;color:var(--muted)}
-.tor .tor-t{border-color:var(--accent-line);background:var(--accent-soft)} .tor .tor-t .lab{color:var(--accent)}
-.tor .tor-o{border-color:var(--warm-line);background:var(--warm-soft)} .tor .tor-o .lab{color:var(--warm)}
-.tor .tor-r{border-color:var(--good);background:var(--good-soft)} .tor .tor-r .lab{color:var(--good)}
-.tor p{margin:0 0 6px;font-size:15.5px;max-width:none}
+.tor .tor-t{border-color:var(--accent-line)} .tor .tor-t .lab{color:var(--accent)}
+.tor p{margin:0 0 7px;font-size:15.5px;max-width:none}
 .tor p b{font-weight:600}
+.la,.lo,.lr{font-family:var(--f-ui);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;display:inline-block;padding:1px 7px;border-radius:4px;margin-right:6px;vertical-align:1px;white-space:nowrap}
+.la{background:var(--accent-soft);color:var(--accent)}
+.lo{background:var(--warm-soft);color:var(--warm)}
+.lr{background:var(--good-soft);color:var(--good)}
 .dtheme{border-top:1px solid var(--line-2);padding-top:22px;margin-top:22px}
 .dth-title{font-family:var(--f-display)!important;font-size:24px!important;font-weight:400!important;letter-spacing:0!important;text-transform:none!important;color:var(--ink)!important;margin:0 0 12px!important}
 .dsavoir{border:1px solid var(--line);border-radius:6px;padding:12px 16px 6px;margin:0 0 14px;background:var(--surface)}
@@ -320,33 +322,40 @@ textarea{width:100%;min-height:110px;font-family:var(--f-body);font-size:16px;li
 .dsavoir ul{margin:0;padding-left:1.15em;font-size:15px}
 .dsavoir li{margin:.3em 0;max-width:none}
 .dsavoir li b{font-weight:600}
-.plan p b:first-child{font-family:var(--f-ui);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;margin-right:4px}
-.plan p:nth-of-type(1) b:first-child{color:var(--accent)}
-.plan p:nth-of-type(2) b:first-child{color:var(--warm)}
-.plan p:nth-of-type(3) b:first-child{color:var(--good)}
-.modele{border:1px solid var(--line);border-radius:8px;background:var(--surface);padding:6px 0;margin:12px 0 16px}
-.mp{display:grid;grid-template-columns:130px minmax(0,1fr);gap:12px;padding:10px 18px;border-bottom:1px solid var(--line-2)}
-.mp:last-child{border-bottom:0}
-.mp p{margin:0;font-size:15.5px;max-width:none}
-.mlab{font-family:var(--f-ui);font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);padding-top:3px;line-height:1.3}
-.mp.t .mlab{color:var(--accent)} .mp.o .mlab{color:var(--warm)} .mp.r .mlab{color:var(--good)}
-.mp.t{background:var(--accent-soft)} .mp.o{background:var(--warm-soft)} .mp.r{background:var(--good-soft)}
+.plan{border:1px solid var(--line);border-radius:6px;padding:12px 16px 10px;margin:0 0 12px;background:var(--surface);font-size:15px}
+.plan b.t{font-family:var(--f-display);font-size:22px;display:block;margin-bottom:6px;font-weight:400}
+.plan p{margin:0 0 6px;max-width:none}
+.plan .alt{font-family:var(--f-ui);font-size:13px;color:var(--muted);margin-bottom:10px}
+.pos{border-top:1px solid var(--line-2);padding-top:10px;margin-top:10px}
+.poslab{font-family:var(--f-ui);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:8px;color:var(--ink)}
+.pos-a .poslab{color:var(--accent)} .pos-b .poslab{color:var(--muted)}
+.arg{padding:8px 0 4px;border-bottom:1px dashed var(--line-2)}
+.arg:last-child{border-bottom:0}
+.arg p{line-height:1.5}
+.modele2{border:1px solid var(--line);border-radius:8px;background:var(--surface);padding:14px 20px;margin:12px 0 4px}
+.mpara{margin:0 0 12px;font-size:15.5px;line-height:1.6;max-width:none;text-align:left}
+.mpara:last-child{margin-bottom:0}
+.seg{border-radius:3px;padding:1px 0;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.seg::before{content:attr(data-l);font-family:var(--f-ui);font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:1px 6px;border-radius:3px;margin-right:5px;vertical-align:2px;color:var(--muted);background:var(--line-2)}
+.seg.a{background:var(--accent-soft)} .seg.a::before{background:var(--accent);color:var(--accent-ink)}
+.seg.o{background:var(--warm-soft)} .seg.o::before{background:var(--warm);color:#fff}
+.seg.r{background:var(--good-soft)} .seg.r::before{background:var(--good);color:#fff}
 #d-setup select{max-width:100%;width:100%}
 .dcheck{list-style:none;padding:0;margin:8px 0 14px;font-family:var(--f-ui);font-size:14.5px}
 .dcheck li{display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-bottom:1px solid var(--line-2)}
 .dcheck input{margin-top:4px;flex:none;width:16px;height:16px}
 .dwords{font-family:var(--f-ui);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;margin-top:6px}
 #d-work textarea{min-height:260px}
+.dtheme,.plan[id],.xblock{scroll-margin-top:72px}
 @media (max-width:900px){
-  .mp{grid-template-columns:1fr;gap:2px}
   .dth-title{font-size:22px!important}
+  .plan b.t{font-size:20px}
 }
 @media print{
   .express-actions,#d-setup,#d-work{display:none!important}
-  .mp,.plan,.tor > div,.dsavoir{break-inside:avoid}
+  .plan,.tor > div,.dsavoir,.arg{break-inside:avoid}
+  .seg{background:none!important}
 }
-
-.dtheme,.plan[id],.xblock{scroll-margin-top:72px}
 </style>
 
 
@@ -355,271 +364,402 @@ textarea{width:100%;min-height:110px;font-family:var(--f-body);font-size:16px;li
 <div class="xwrap">
   <div class="xhead">
     <div>
-      <div class="eyebrow">Intra · Texte argumentatif partiel · 25 % de la session</div>
-      <h2>La dissertation, de la structure aux sujets</h2>
+      <div class="eyebrow">Intra · Dissertation partielle de 500 mots · 25 % de la session</div>
+      <h2>Deux arguments, deux objections, deux réfutations</h2>
     </div>
     <div class="row express-actions"><a class="btn primary" href="#dpr">S'entraîner sur un sujet</a></div>
   </div>
-  <p class="lead">Ce que dit le cours 11 : la structure est <b>thèse, objection, réfutation</b>, et huit thématiques peuvent tomber. Cette page te donne d'abord la structure avec des phrases toutes prêtes, puis pour chaque thématique ce qu'il faut savoir, les questions probables et un plan complet. À la fin, un texte modèle et un mode d'entraînement chronométré.</p>
+  <p class="lead">Le format : une introduction, <b>un seul paragraphe de développement</b> qui enchaîne argument 1, objection, réfutation, puis argument 2, objection, réfutation, et une conclusion. Pour chacun des huit sujets, cette page donne les deux positions possibles avec deux arguments complets chacune. Choisis ta position, apprends ses deux blocs, et tu as ton paragraphe.</p>
   <div class="xplan">
-    <a href="#dst"><b>1 · La structure</b>Le gabarit et les phrases d'amorce</a>
-    <a href="#dth"><b>2 · Les 8 thématiques</b>Savoir, questions probables, plans</a>
-    <a href="#dmo"><b>3 · Texte modèle</b>Une copie complète annotée</a>
-    <a href="#dpr"><b>4 · S'entraîner</b>Sujet au hasard, chrono, autocorrection</a>
+    <a href="#dst"><b>1 · Le format</b>Le squelette du texte et le budget</a>
+    <a href="#dth"><b>2 · Les 8 sujets</b>Savoir, deux positions, deux arguments</a>
+    <a href="#dmo"><b>3 · Texte modèle</b>500 mots dans ce format exact</a>
+    <a href="#dpr"><b>4 · S'entraîner</b>Sujet, chrono, autocorrection</a>
   </div>
 
   <!-- ------------------------------------------------ STRUCTURE -->
   <div class="xblock" id="dst">
-    <h3>1 · La structure imposée</h3>
-    <div class="xtime">Thèse · objection · réfutation, avec une introduction et une conclusion courtes</div>
-    <div class="piege">
-      <span class="blabel">Avant tout</span>
-      <p>Si la professeure t'a remis une feuille de structure ou un gabarit en classe (cours 8 à 10), <b>c'est sa feuille qui fait foi</b>. Le gabarit ci-dessous suit ce que ses diapos demandent depuis le début de la session : introduction en trois temps (sujet amené, posé, divisé), une position, un argument expliqué avec un exemple, une objection, une réfutation.</p>
-    </div>
+    <h3>1 · Le format imposé</h3>
+    <div class="xtime">500 mots · introduction, un paragraphe de développement, conclusion</div>
     <div class="tor">
-      <div class="tor-i"><b class="lab">Introduction · 3 à 5 phrases</b>
-        <p><b>Sujet amené</b> : le contexte en une phrase. « Au 5<sup>e</sup> siècle avant notre ère, la démocratie athénienne met face à face les sophistes et Socrate sur la question de… »</p>
-        <p><b>Sujet posé</b> : la question, reformulée avec tes mots. « On peut donc se demander si… »</p>
-        <p><b>Sujet divisé</b> : ce que tu vas faire. « Je soutiendrai que… J'examinerai ensuite l'objection selon laquelle…, avant de montrer pourquoi elle ne tient pas. »</p></div>
-      <div class="tor-t"><b class="lab">Thèse · la partie la plus longue</b>
-        <p><b>Position claire</b> en une phrase : « Je soutiens que… »</p>
-        <p><b>Argument expliqué</b>, pas énuméré : pourquoi ta position est vraie, en 4 à 6 phrases qui s'enchaînent avec « car », « en effet », « autrement dit », « donc ». Définis le concept du cours que tu utilises (la vertu-science, la convention, la doxa…).</p>
-        <p><b>Exemple concret</b> qui illustre l'argument, puis une phrase qui relie l'exemple à la thèse.</p>
-        <p><b>Un philosophe nommé</b> avec son idée exacte : « Comme le soutient Socrate dans l'Apologie… »</p></div>
-      <div class="tor-o"><b class="lab">Objection · le meilleur argument contre toi</b>
-        <p>« On pourrait m'objecter que… », « Un sophiste comme Thrasymaque répondrait que… »</p>
-        <p>Présente-la <b>honnêtement et complètement</b> (3 à 5 phrases), avec son raisonnement et un exemple. Une objection faible que tu écrases en une ligne ne rapporte rien : la correctrice veut voir que tu connais la position adverse.</p></div>
-      <div class="tor-r"><b class="lab">Réfutation · pourquoi l'objection ne tient pas</b>
-        <p>« Cependant, cette objection repose sur une erreur : … », « Or, … », « En réalité, … »</p>
-        <p>Trois façons de réfuter : montrer qu'une <b>prémisse est fausse</b>; montrer que l'objection mène à une <b>conséquence absurde ou inacceptable</b>; donner un <b>contre-exemple</b>. Termine en <b>revenant à ta thèse</b> : « C'est pourquoi il faut maintenir que… »</p></div>
-      <div class="tor-c"><b class="lab">Conclusion · 2 phrases</b>
-        <p>Rappelle la thèse en la reformulant, puis une ouverture (une question qui reste, un lien avec aujourd'hui).</p></div>
+      <div class="tor-i"><b class="lab">Introduction · environ 70 mots</b>
+        <p><b>Sujet amené</b> : le contexte en une phrase (Athènes, 5<sup>e</sup> siècle, les sophistes et Socrate). <b>Sujet posé</b> : la question, reformulée. <b>Sujet divisé</b> : ta position et tes deux arguments annoncés. « Je soutiendrai que…, d'abord parce que…, ensuite parce que… »</p></div>
+      <div class="tor-t"><b class="lab">Le paragraphe de développement · environ 380 mots · six blocs qui s'enchaînent</b>
+        <p><b class="la">Argument 1</b> « Premièrement, … » Ta raison, expliquée en 3 ou 4 phrases qui s'enchaînent (car, en effet, autrement dit, donc), avec un concept du cours défini et un philosophe nommé. Environ 70 mots.</p>
+        <p><b class="lo">Objection 1</b> « On pourrait m'objecter, avec Thrasymaque, que… » Le meilleur argument contre ton argument 1, présenté honnêtement avec son raisonnement. Environ 40 mots.</p>
+        <p><b class="lr">Réfutation 1</b> « Cependant, cette objection… » Pourquoi elle ne tient pas : prémisse fausse, conséquence absurde ou contre-exemple. Tu reviens à ton argument. Environ 55 mots.</p>
+        <p><b class="la">Argument 2</b> « Deuxièmement, … » Une raison différente de la première, même traitement. Environ 70 mots.</p>
+        <p><b class="lo">Objection 2</b> « Certes, un sophiste répondrait que… » Environ 40 mots.</p>
+        <p><b class="lr">Réfutation 2</b> « Or, … » Environ 55 mots.</p></div>
+      <div class="tor-c"><b class="lab">Conclusion · environ 50 mots</b>
+        <p>Rappelle ta position et tes deux arguments en une phrase, puis une ouverture (une question qui reste, un lien avec aujourd'hui).</p></div>
     </div>
-
-    <h4>Le budget de mots et de temps</h4>
+    <div class="piege">
+      <span class="blabel">Les trois règles qui font la note</span>
+      <p><b>Deux arguments différents.</b> Si ton argument 2 redit l'argument 1 avec d'autres mots, tu perds la moitié des points du paragraphe. Sur cette page, l'argument 1 est presque toujours « ce qu'est la justice, le bien, la philosophie » et l'argument 2 « ce que ça produit dans la cité ou dans la vie ».</p>
+      <p><b>Une objection réelle pour chaque argument.</b> Elle doit attaquer <em>cet</em> argument-là, être attribuée à un philosophe du cours et contenir son raisonnement. Une objection que tu écrases en une ligne ne vaut rien.</p>
+      <p><b>Expliquer, pas énumérer.</b> Chaque notion nommée reçoit une phrase qui dit ce qu'elle est et une phrase qui dit pourquoi elle sert ton argument. « Socrate a l'elenchos, la maïeutique et l'aporie » est une liste, pas un argument.</p>
+    </div>
+    <h4>Le budget de temps sur 2 heures</h4>
     <div class="tbl-wrap"><table>
-      <tr><th>Partie</th><th>Mots (pour un texte de 400 à 500 mots)</th><th>Temps (sur 2 h)</th></tr>
-      <tr><td>Lire le sujet, choisir la position, faire le plan sur brouillon</td><td>0</td><td>15 min</td></tr>
-      <tr><td>Introduction</td><td>60 à 80</td><td>10 min</td></tr>
-      <tr><td>Thèse (position, argument, exemple, philosophe)</td><td>150 à 200</td><td>30 min</td></tr>
-      <tr><td>Objection</td><td>80 à 100</td><td>15 min</td></tr>
-      <tr><td>Réfutation</td><td>80 à 100</td><td>20 min</td></tr>
-      <tr><td>Conclusion</td><td>30 à 40</td><td>5 min</td></tr>
-      <tr><td>Relecture du français (accords, homophones, ponctuation)</td><td>0</td><td>15 min</td></tr>
-    </table></div>
-    <p class="stat-line">Si la consigne donne un autre nombre de mots ou une autre durée, garde les proportions : la thèse prend le tiers, la relecture n'est jamais sautée.</p>
-
-    <h4>Les erreurs relevées par la professeure à l'examen 1</h4>
-    <div class="tbl-wrap"><table>
-      <tr><th>Erreur</th><th>Ce que ça veut dire</th><th>Le réflexe</th></tr>
-      <tr><td><b>Énumérer au lieu d'expliquer</b></td><td>« Socrate a l'elenchos, la maïeutique et l'aporie. » Une liste de mots ne prouve pas que tu comprends.</td><td>Chaque notion nommée reçoit une phrase qui dit <b>ce qu'elle est</b> et une phrase qui dit <b>pourquoi elle sert ton argument</b>.</td></tr>
-      <tr><td><b>Langage familier, abréviations</b></td><td>« ex. », « etc. », « genre », « pis », « ça fait que », « pas mal ».</td><td>« par exemple », « c'est pourquoi », « ainsi ». Relis en cherchant les mots que tu dirais à un ami mais pas à une correctrice.</td></tr>
-      <tr><td><b>Accords</b></td><td>Genre et nombre, sujet et verbe : « les sophistes enseigne », « la loi sont ».</td><td>À la relecture, pour chaque verbe, pointe son sujet avec le crayon.</td></tr>
-      <tr><td><b>Ponctuation, phrases trop longues</b></td><td>Points d'exclamation, points de suspension, phrases de cinq lignes.</td><td>Une idée par phrase. Aucun « ! » ni « … » dans une dissertation.</td></tr>
-      <tr><td><b>Homophones</b></td><td>ça / sa, a / à, ce / se, son / sont, ces / ses, ou / où.</td><td>« ça » = cela; « sa » = la sienne. « a » = avait; « à » ne se remplace pas.</td></tr>
+      <tr><th>Étape</th><th>Temps</th><th>Ce que tu fais</th></tr>
+      <tr><td>Choisir la position et le plan</td><td>15 min</td><td>Sur le brouillon : position, argument 1, objection 1, réfutation 1, argument 2, objection 2, réfutation 2, en mots-clés.</td></tr>
+      <tr><td>Introduction</td><td>10 min</td><td>Trois temps, 70 mots.</td></tr>
+      <tr><td>Développement</td><td>60 min</td><td>Six blocs, dans l'ordre, 380 mots. Un bloc toutes les 10 minutes.</td></tr>
+      <tr><td>Conclusion</td><td>5 min</td><td>50 mots.</td></tr>
+      <tr><td>Relecture du français</td><td>15 min</td><td>Verbe par verbe : le sujet. Homophones : ça / sa, a / à, ce / se, son / sont. Aucun « ! », aucun « … », aucune abréviation.</td></tr>
+      <tr><td>Compter les mots</td><td>5 min</td><td>Vise 480 à 520. Une ligne de ta main fait environ 10 à 12 mots.</td></tr>
     </table></div>
     <div class="retenir">
-      <span class="blabel">Les connecteurs qui structurent le texte</span>
-      <p><b>Pour poser</b> : je soutiens que, il faut admettre que, en effet, autrement dit. <b>Pour prouver</b> : car, puisque, c'est pourquoi, par conséquent, donc. <b>Pour illustrer</b> : par exemple, ainsi, on le voit lorsque. <b>Pour objecter</b> : cependant, on pourrait m'objecter que, certes, il est vrai que. <b>Pour réfuter</b> : or, en réalité, cette objection oublie que, ce raisonnement ne tient pas car. <b>Pour conclure</b> : en somme, finalement, il faut donc maintenir que.</p>
+      <span class="blabel">Les connecteurs à utiliser</span>
+      <p><b>Arguments</b> : premièrement, deuxièmement, je soutiens que, en effet, car, autrement dit, c'est pourquoi. <b>Objections</b> : on pourrait m'objecter que, certes, il est vrai que, un sophiste répondrait que. <b>Réfutations</b> : cependant, or, en réalité, cette objection oublie que, ce raisonnement ne tient pas car. <b>Conclusion</b> : en somme, il faut donc maintenir que.</p>
     </div>
   </div>
 
-  <!-- ------------------------------------------------ THÉMATIQUES -->
+  <!-- ------------------------------------------------ SUJETS -->
   <div class="xblock" id="dth">
-    <h3>2 · Les huit thématiques : savoir, questions probables, plans</h3>
-    <div class="xtime">Pour chaque thème : ce qu'il faut pouvoir écrire, puis les sujets les plus probables avec un plan thèse, objection, réfutation</div>
+    <h3>2 · Les huit sujets : savoir, deux positions, deux arguments chacune</h3>
+    <div class="xtime">Pour chaque thématique du cours 11 : ce qu'il faut savoir, le sujet le plus probable, puis les deux positions</div>
     <div class="note">
-      <span class="blabel">Comment choisir sa position</span>
-      <p>Prends presque toujours le <b>côté de Socrate</b> (vérité universelle, vertu-science, justice distincte de la loi, obéissance aux lois) et mets les <b>sophistes en objection</b> (Protagoras, Thrasymaque, Calliclès). Tu as beaucoup plus de matière du cours pour réfuter dans ce sens, et les questions sont formulées pour ça. L'exception : les questions sur la démocratie athénienne, où la position « oui, mais » avec l'objection historique (femmes, esclaves, démagogues) marche bien.</p>
+      <span class="blabel">Quelle position choisir</span>
+      <p>La position marquée <b>conseillée</b> est celle où le cours te donne le plus de matière et où les objections sont les plus faciles à réfuter. L'autre position est là pour deux raisons : si le sujet est formulé dans l'autre sens, et parce que ses arguments sont exactement les objections de la position conseillée. Apprendre les deux, c'est apprendre le sujet.</p>
     </div>
 
     <!-- T1 -->
     <div class="dtheme" id="t1">
       <h4 class="dth-title">Thème 1 · La différence entre la philosophie, la science et les mythes</h4>
-      <div class="dsavoir"><span class="blabel">Ce qu'il faut pouvoir écrire</span>
+      <div class="dsavoir"><span class="blabel">Ce qu'il faut savoir</span>
         <ul>
-          <li>La philosophie : <b>réflexion critique et rationnelle en quête de sens</b> sur l'existence et le monde. La raison : faculté de connaître, juger et agir selon des principes justifiables logiquement.</li>
-          <li>Science / philosophie : la science <b>progresse</b> (le nouveau remplace l'ancien) avec un savoir <b>concret, empirique</b>; la philosophie pose des <b>questions éternelles</b> avec un savoir <b>conceptuel</b>. La philosophie est la <b>source des sciences modernes</b>.</li>
-          <li>Mythe / philosophie : principes <b>externes (transcendance)</b> contre <b>internes (immanence)</b>; <b>surnaturel</b> contre <b>nature</b>; <b>plusieurs principes</b> contre <b>économie des principes</b>. Le mythe raconte, la philosophie argumente.</li>
-          <li>Les présocratiques font le passage : principes immanents dont on fait l'expérience, nature <b>intelligible</b> en elle-même, explications économiques. Premiers scientifiques par la réflexion purement théorique, mais <b>sans outil</b> et avec d'autres intérêts (théologie, ontologie, morale).</li>
-          <li>Nuance à placer : <b>rationnel ne veut pas dire vrai</b>; l'art, la religion, la poésie donnent aussi accès à des vérités; la raison est un <b>ajout</b>, pas un remplacement du mythe.</li>
+          <li>La philosophie : <b>réflexion critique et rationnelle en quête de sens</b> sur l'existence et le monde. La raison : faculté de connaître, juger et agir selon des principes justifiables logiquement. La philosophie est la <b>source des sciences modernes</b>.</li>
+          <li>Science / philosophie : la science <b>progresse</b> (le nouveau remplace l'ancien), savoir <b>concret et empirique</b>; la philosophie pose des <b>questions éternelles</b>, savoir <b>conceptuel</b>.</li>
+          <li>Mythe / philosophie : principes <b>externes (transcendance)</b> contre <b>internes (immanence)</b>; <b>surnaturel</b> contre <b>nature</b>; <b>plusieurs principes</b> contre <b>économie des principes</b>.</li>
+          <li>Les présocratiques : principes immanents dont on fait l'expérience, nature <b>intelligible</b> en elle-même, explications économiques. Premiers scientifiques par la réflexion purement théorique, mais <b>sans outil</b> et avec d'autres intérêts (théologie, ontologie, morale). Ils ont anticipé l'atome, l'évolution, le Big Bang, la conservation de l'énergie.</li>
+          <li>Nuances : <b>rationnel ne veut pas dire vrai</b>; l'art, la religion, la poésie donnent aussi accès à des vérités; la raison est un <b>ajout</b>, pas un remplacement du mythe.</li>
         </ul></div>
-      <div class="plan" id="p11"><b class="t">La philosophie est-elle une science ?</b>
-        <p><b>Thèse :</b> non, la philosophie n'est pas une science, même si elle en est la source. La science progresse : chaque découverte remplace la précédente, et son savoir est empirique, vérifié par l'observation et les instruments. La philosophie, elle, revient sans cesse sur les mêmes questions éternelles (qu'est-ce que la justice, le bien, la vérité ?) et son savoir est conceptuel : elle définit et argumente, elle ne mesure pas. Exemple : la physique a réglé la question de la composition de la matière, mais la question de Socrate « qu'est-ce que la justice ? » est toujours ouverte.</p>
-        <p><b>Objection :</b> les présocratiques, premiers philosophes, ont anticipé l'atome (Démocrite), l'évolution, le Big Bang et la conservation de l'énergie. Ils raisonnaient à partir de l'observation de la nature. La philosophie serait donc simplement une science à ses débuts.</p>
-        <p><b>Réfutation :</b> anticiper n'est pas démontrer. Démocrite n'a jamais observé un atome : sa méthode est la spéculation rationnelle sans aucun outil, et ses intérêts sont la théologie, l'ontologie et la morale, pas la mesure. De plus, la philosophie pose la question du sens, que la science ne pose jamais : la biologie explique comment on meurt, pas si la vie sans examen vaut d'être vécue. La philosophie a engendré la science sans se confondre avec elle.</p></div>
-      <div class="plan" id="p12"><b class="t">La raison a-t-elle rendu la pensée mythique inutile ?</b>
-        <p><b>Thèse :</b> non. La naissance de la rationalité comme explication du réel n'a pas supprimé le mythe : un nouveau mode de pensée est un ajout dans les outils d'explication, pas un remplacement. Le mythe remplit sept fonctions dont plusieurs ne relèvent pas de la raison : donner du sens à la vie, organiser le temps, proposer des modèles moraux. Exemple : nos fêtes, nos récits nationaux et même nos superstitions sportives sont des mythes encore vivants.</p>
-        <p><b>Objection :</b> depuis les présocratiques, la nature est intelligible en elle-même par des principes internes; les dieux d'Hésiode n'expliquent plus rien. Xénophane a montré que ces dieux ne sont que des humains agrandis. Un outil qui n'explique plus rien est inutile.</p>
-        <p><b>Réfutation :</b> cette objection confond expliquer et donner du sens. Le cours le rappelle : rationnel et irrationnel ne sont pas synonymes de vrai et faux; l'art, la religion et la poésie peuvent nous faire accéder à des vérités sans la raison. Le mythe a perdu sa fonction explicative, mais pas sa fonction de sens et de cohésion. Il est donc devenu inutile comme science, pas comme pensée.</p></div>
+      <div class="plan" id="p1"><b class="t">La philosophie est-elle une science ?</b>
+        <p class="alt">Mêmes arguments si le sujet dit : « La philosophie se distingue-t-elle vraiment de la science ? », « Les présocratiques sont-ils les premiers scientifiques ? »</p>
+        <div class="pos pos-a"><b class="poslab">Position NON, conseillée</b>
+          <div class="arg">
+            <p><b class="la">Argument 1</b> La science progresse et la philosophie ne progresse pas de la même façon. En science, chaque découverte remplace la précédente : le savoir est concret, pratique, empirique, vérifié par l'observation. La philosophie revient sans cesse sur les mêmes questions éternelles, comme « qu'est-ce que la justice ? », que Socrate posait déjà et qui reste ouverte; son savoir est conceptuel, il définit et argumente au lieu de mesurer.</p>
+            <p><b class="lo">Objection</b> Les présocratiques, premiers philosophes, ont anticipé l'atome (Démocrite), l'évolution, le Big Bang et la conservation de l'énergie, en raisonnant à partir de l'observation de la nature. La philosophie serait donc une science à ses débuts, qui a progressé comme les autres.</p>
+            <p><b class="lr">Réfutation</b> Anticiper n'est pas démontrer. Démocrite n'a jamais observé un atome : sa méthode est la spéculation formelle et rationnelle, sans aucun outil, et ses intérêts sont la théologie, l'ontologie et la morale, non la mesure. Le cours le dit : méthode différente, intérêts différents. La ressemblance des résultats cache une différence de nature.</p>
+          </div>
+          <div class="arg">
+            <p><b class="la">Argument 2</b> La philosophie pose la question du sens, que la science ne pose jamais. Elle est une réflexion critique en quête de sens sur l'existence humaine : la biologie explique comment on meurt, elle ne dit pas si « la vie sans examen vaut la peine d'être vécue », comme le demande Socrate. Elle remet en question nos opinions et nos influences au lieu de produire des résultats; c'est un état d'être, un désir de sagesse, non un corps de connaissances.</p>
+            <p><b class="lo">Objection</b> Philosophie et science partagent la même exigence rationnelle : des principes justifiés logiquement, des explications internes à la nature, le rejet du surnaturel. Si la démarche est la même, la différence de questions ne suffit pas à en faire deux choses distinctes.</p>
+            <p><b class="lr">Réfutation</b> Partager la raison ne fait pas une science, sinon les mathématiques, le droit et la philosophie seraient une seule discipline. Le cours le rappelle : la philosophie est la source des sciences modernes; une source n'est pas la rivière. Elle a engendré la science en introduisant la rationalité, puis elle a gardé pour elle les questions que la science ne peut trancher : le bien, le sens, la justice.</p>
+          </div>
+        </div>
+        <div class="pos pos-b"><b class="poslab">Position OUI</b>
+          <div class="arg">
+            <p><b class="la">Argument 1</b> Les premiers philosophes sont les premiers scientifiques de l'histoire. Ils sont les premiers à nourrir une réflexion purement théorique, ni technique ni religieuse, sur la nature : principes internes dont on peut faire l'expérience, nature intelligible en elle-même, explications économiques. Héraclite cherche une loi stable derrière le changement; Démocrite explique tout par les atomes et le vide, et la physique lui a donné raison.</p>
+            <p><b class="lo">Objection</b> Sans instruments ni expériences, ce n'est que de la spéculation. La science exige la vérification empirique; les présocratiques n'ont rien vérifié, ils ont deviné.</p>
+            <p><b class="lr">Réfutation</b> Toute science commence par une hypothèse rationnelle avant l'instrument : le microscope n'a pas inventé l'atome, il a confirmé Démocrite. Ce qui fait la science, c'est l'exigence de rationalité et le rejet des causes surnaturelles, et cette exigence est née avec la philosophie. L'outil est un moyen; la démarche est la même.</p>
+          </div>
+          <div class="arg">
+            <p><b class="la">Argument 2</b> Philosophie et science s'opposent ensemble au mythe, et par les mêmes traits : immanence contre transcendance, nature contre surnaturel, économie des principes contre foule de dieux. Le cours affirme que dans un contexte philosophique ou scientifique, l'approche rationnelle est une exigence. Ce sont deux moments d'une même rupture avec le récit mythique.</p>
+            <p><b class="lo">Objection</b> La science progresse, ses nouvelles connaissances remplacent les vieilles, tandis que la philosophie pose des questions éternelles sans jamais les régler. Une discipline qui ne progresse pas n'est pas une science.</p>
+            <p><b class="lr">Réfutation</b> La philosophie progresse, mais autrement : elle a remplacé le mythe par la raison, la justice divine par la justice humaine, le relativisme des sophistes par la vertu-science. Ses questions demeurent, mais ses réponses se raffinent, comme en science où la question « de quoi est faite la matière ? » demeure aussi pendant que les réponses changent.</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- T2 -->
     <div class="dtheme" id="t2">
       <h4 class="dth-title">Thème 2 · La pensée mythique</h4>
-      <div class="dsavoir"><span class="blabel">Ce qu'il faut pouvoir écrire</span>
+      <div class="dsavoir"><span class="blabel">Ce qu'il faut savoir</span>
         <ul>
-          <li>Le mythe : <b>tradition orale</b>, récits non historiques; raconte l'<b>origine des humains</b>; explique les <b>phénomènes naturels</b>; fait intervenir des <b>êtres surnaturels</b>; propose des <b>modèles moraux</b>; <b>organise le temps</b>; <b>donne du sens</b>.</li>
-          <li>La religion apparaît pour s'attirer les faveurs des êtres surnaturels; agir selon leurs prescriptions devient le <b>code moral et social</b>; mythes et rituels maintiennent l'ordre.</li>
-          <li><b>Homère et Hésiode</b> écrivent les mythes, précisent l'<b>anthropomorphisme</b> des dieux (corps, passions, fonctions), éliminent des contradictions. Hésiode : la <b>Théogonie</b> (Chaos, Gaïa, Éros; Titans; Zeus roi établit l'ordre) et <b>Les Travaux et les Jours</b> (Prométhée vole le feu, Pandore ouvre la jarre, races d'or, d'argent, de bronze, des héros, de fer).</li>
-          <li><b>Xénophane</b> critique l'anthropomorphisme et l'immoralisme de ces dieux et propose un dieu unique, immobile, rationnel : c'est le début des lumières grecques.</li>
-          <li>Enjeu : l'ordre imposé par les dieux est <b>arbitraire</b>; la philosophie cherche un ordre stable dans la nature elle-même.</li>
+          <li>Le mythe : <b>tradition orale</b>, récits non historiques; raconte l'<b>origine des humains</b>; explique les <b>phénomènes naturels</b>; fait intervenir des <b>êtres surnaturels</b>; propose des <b>modèles moraux</b>; <b>organise le temps</b>; <b>donne du sens</b>. La religion apparaît pour s'attirer les faveurs des dieux; leurs prescriptions deviennent le <b>code moral et social</b>.</li>
+          <li><b>Homère et Hésiode</b> écrivent les mythes, précisent l'<b>anthropomorphisme</b> des dieux, éliminent des contradictions. Hésiode : la <b>Théogonie</b> (Chaos, Gaïa, Éros; Titans; Zeus établit l'ordre) et <b>Les Travaux et les Jours</b> (Prométhée, Pandore et la jarre, races d'or, d'argent, de bronze, des héros, de fer).</li>
+          <li><b>Xénophane</b> critique l'anthropomorphisme et l'immoralisme de ces dieux et propose un dieu unique, immobile, rationnel.</li>
+          <li>Enjeu : l'ordre imposé par les dieux est <b>arbitraire</b>; la philosophie cherche un ordre stable dans la nature elle-même. Mais la raison est un ajout : la pensée mythique subsiste.</li>
         </ul></div>
-      <div class="plan" id="p21"><b class="t">Le mythe est-il une explication valable du monde ?</b>
-        <p><b>Thèse :</b> non, le mythe n'explique pas, il raconte. Ses principes sont externes et surnaturels : la foudre vient de la colère de Zeus, les malheurs de la jarre de Pandore. Or un ordre qui dépend du caprice des dieux est arbitraire; il ne rend pas compte de la régularité du monde. Une explication valable doit reposer sur des principes internes à la nature dont on peut faire l'expérience, comme l'ont compris les présocratiques. Exemple : Héraclite explique le changement par le feu et par une loi stable, pas par une querelle divine.</p>
-        <p><b>Objection :</b> pendant des siècles, le mythe a suffi à organiser des sociétés entières : il fixait le code moral, le calendrier des fêtes, la place de chacun. Une pensée aussi efficace pour maintenir l'ordre doit bien contenir une vérité sur le monde.</p>
-        <p><b>Réfutation :</b> être utile n'est pas être vrai. Que le mythe maintienne la cohésion sociale montre sa force comme récit, pas sa valeur comme explication. Xénophane le démontre : si les bœufs avaient des mains, ils dessineraient des dieux à forme de bœufs; les dieux d'Homère sont des humains agrandis, avec leurs jalousies et leurs mensonges. Une explication qui projette nos passions sur le ciel nous parle de nous, pas du monde.</p></div>
+      <div class="plan" id="p2"><b class="t">Le mythe est-il une explication valable du monde ?</b>
+        <p class="alt">Mêmes arguments si le sujet dit : « La pensée mythique a-t-elle encore une valeur aujourd'hui ? », « La raison a-t-elle rendu le mythe inutile ? » (inverser les positions).</p>
+        <div class="pos pos-a"><b class="poslab">Position NON, conseillée</b>
+          <div class="arg">
+            <p><b class="la">Argument 1</b> Le mythe n'explique pas, il raconte. Ses principes sont externes et surnaturels : la foudre vient de la colère de Zeus, les malheurs humains de la jarre de Pandore. Or un ordre qui dépend du caprice des dieux est arbitraire; il ne rend pas compte de la régularité du monde. Une explication valable repose sur des principes internes à la nature dont on peut faire l'expérience, comme Héraclite qui explique le changement par le feu et par une loi stable, non par une querelle divine.</p>
+            <p><b class="lo">Objection</b> Pendant des siècles, le mythe a suffi à des sociétés entières pour comprendre le monde et y vivre : il fixait le code moral, le calendrier, la place de chacun. Une pensée aussi efficace doit contenir une vérité sur le monde.</p>
+            <p><b class="lr">Réfutation</b> Être utile n'est pas être vrai. L'ordre que le mythe maintient est social, non naturel : il explique pourquoi on obéit au roi, pas pourquoi il pleut. Hésiode et Homère ont d'ailleurs dû éliminer eux-mêmes les contradictions entre les récits en fixant des filiations cohérentes, preuve que les mythes ne décrivaient pas un monde mais des traditions.</p>
+          </div>
+          <div class="arg">
+            <p><b class="la">Argument 2</b> Les dieux du mythe sont des humains agrandis. Homère et Hésiode leur donnent un corps, des passions, des jalousies, des mensonges : c'est l'anthropomorphisme. Xénophane, au début des lumières grecques, en tire la conclusion : un récit qui projette nos passions sur le ciel nous parle de nous, pas du monde. Il propose à la place un dieu unique, immobile et rationnel, cause du mouvement par la force de son esprit.</p>
+            <p><b class="lo">Objection</b> L'anthropomorphisme n'est qu'une image accessible à tous; la science aussi se sert de modèles imagés pour expliquer. Donner un visage aux forces de la nature ne les rend pas fausses.</p>
+            <p><b class="lr">Réfutation</b> Un modèle scientifique se corrige par l'observation; les dieux d'Homère ne se corrigent par rien, et ils sont immoraux et contradictoires. Xénophane le dit en une image : si les bœufs avaient des mains, ils dessineraient des dieux à forme de bœufs. Une explication qui change selon qui la raconte n'explique pas le monde, elle décrit celui qui parle.</p>
+          </div>
+        </div>
+        <div class="pos pos-b"><b class="poslab">Position OUI</b>
+          <div class="arg">
+            <p><b class="la">Argument 1</b> Le mythe explique ce que la raison n'explique pas : l'origine des humains, le sens de la vie, les modèles moraux. Le cours rappelle que rationnel et irrationnel ne sont pas synonymes de vrai et de faux, et que la religion, l'art et la poésie peuvent nous faire accéder à des vérités sans la raison. Les Travaux et les Jours d'Hésiode répondent à la question « pourquoi souffrons-nous ? », que la physique ne pose même pas.</p>
+            <p><b class="lo">Objection</b> Donner du sens n'est pas expliquer. Expliquer, c'est donner des causes, et les présocratiques ont montré que les causes sont dans la nature, non chez les dieux.</p>
+            <p><b class="lr">Réfutation</b> La question de l'origine et du sens est aussi une question sur le monde, pas seulement sur nous. Quand Hésiode raconte que Prométhée a donné le feu aux humains et que Zeus les a punis, il explique la condition humaine : le savoir a un prix. Cette explication n'est pas causale, mais elle reste une réponse valable à une vraie question.</p>
+          </div>
+          <div class="arg">
+            <p><b class="la">Argument 2</b> Le mythe a rendu le monde compréhensible et vivable avant toute science : il organise le temps, fonde le code moral et social, maintient l'ordre par les rituels. Il a été la principale source d'information pour comprendre la réalité, et l'avènement de la raison ne l'a pas supprimé : un nouveau mode de pensée est un ajout dans les outils d'explication, non un remplacement.</p>
+            <p><b class="lo">Objection</b> Si la raison est un ajout, c'est qu'elle explique mieux; le mythe devient alors un outil dépassé, comme une carte ancienne après l'invention du satellite.</p>
+            <p><b class="lr">Réfutation</b> La raison explique mieux les phénomènes naturels, pas la vie humaine. Aujourd'hui encore, nos récits nationaux, nos fêtes, nos superstitions et nos grandes histoires de marques sont des mythes vivants qui organisent le temps et donnent du sens; personne ne les a remplacés par une équation. Le mythe n'est pas une carte ancienne, c'est une autre carte.</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- T3 -->
     <div class="dtheme" id="t3">
       <h4 class="dth-title">Thème 3 · La démocratie athénienne, sa structure et ses enjeux</h4>
-      <div class="dsavoir"><span class="blabel">Ce qu'il faut pouvoir écrire</span>
+      <div class="dsavoir"><span class="blabel">Ce qu'il faut savoir</span>
         <ul>
-          <li>Avant : cités-États monarchiques, pouvoir fondé sur les <b>rituels religieux</b>; les riches propriétaires imposent une <b>aristocratie</b> justifiée par une justice divine à leur avantage; la classe commerçante réclame des <b>lois écrites</b> : passage de la <b>justice divine à la justice humaine</b>.</li>
-          <li><b>Solon</b>, père de la démocratie : abolition des dettes, libération des esclaves grecs, aristocratie de fortune à la place de celle de naissance. <b>Clisthène</b> : 10 tribus mélangées, 1 stratège élu, 50 conseillers <b>tirés au sort</b> par tribu, 500 juges par tribu, <b>ostracisme</b>.</li>
-          <li>Structure : démocratie <b>directe</b>; l'<b>Assemblée du peuple</b> nomme et surveille les magistrats, vote toutes les lois, administre la justice; les <b>lois sont au-dessus de tous</b>; la <b>liberté</b> est la valeur suprême; tout citoyen peut parler.</li>
-          <li>Enjeux : le tirage au sort fait <b>circuler le pouvoir</b> et limite les intrigues; mais le régime dépend des <b>discours</b>, donc des sophistes; fin du 5<sup>e</sup> siècle, des riches poussent le peuple à des <b>décrets contraires aux lois</b> : désordre. Pour Platon, la démocratie dérive en <b>tyrannie par excès de liberté</b>. Pour Socrate, elle exige des citoyens <b>vertueux</b> qui savent ce qu'est la justice.</li>
+          <li>Avant : cités-États monarchiques, pouvoir fondé sur les <b>rituels religieux</b>; aristocratie des riches propriétaires justifiée par une justice divine; la classe commerçante réclame des <b>lois écrites</b> : passage de la <b>justice divine à la justice humaine</b>.</li>
+          <li><b>Solon</b> : abolition des dettes, libération des esclaves grecs, aristocratie de fortune à la place de celle de naissance. <b>Clisthène</b> : 10 tribus mélangées, 1 stratège élu, 50 conseillers <b>tirés au sort</b> par tribu, 500 juges par tribu, <b>ostracisme</b>.</li>
+          <li>Structure : démocratie <b>directe</b>; l'<b>Assemblée du peuple</b> vote toutes les lois, nomme et surveille les magistrats, administre la justice; <b>lois au-dessus de tous</b>; la <b>liberté</b> est la valeur suprême; tout citoyen peut parler; taxes sur les riches.</li>
+          <li>Enjeux : le régime dépend du <b>discours</b>, donc des sophistes; fin du 5<sup>e</sup> siècle, des riches poussent le peuple à des <b>décrets contraires aux lois</b> : désordre. Platon : la démocratie dérive en <b>tyrannie par excès de liberté</b>. Socrate : elle exige des citoyens <b>vertueux</b> qui savent ce qu'est la justice.</li>
         </ul></div>
-      <div class="plan" id="p31"><b class="t">La démocratie athénienne est-elle un régime juste ?</b>
-        <p><b>Thèse :</b> oui, dans son principe, parce qu'elle place la loi au-dessus de tous et fait circuler le pouvoir. Le tirage au sort des conseillers et des juges empêche qu'un petit groupe s'accapare les charges, l'ostracisme écarte celui qui devient trop influent, et tout citoyen, quelle que soit sa classe, peut parler et voter à l'Assemblée. Les Athéniens refusent de se prosterner devant un maître autre que la loi. Exemple : les réformes de Solon donnent à un paysan libéré de ses dettes la possibilité de s'enrichir et d'accéder aux charges publiques, ce qui était impossible sous l'aristocratie de naissance.</p>
-        <p><b>Objection :</b> ce régime est injuste par ses exclusions et par sa fragilité. Le « peuple » exclut les femmes, les esclaves et les étrangers. Et comme tout se décide par le discours, les beaux parleurs formés par les sophistes poussent la foule à des décrets contraires aux lois; Platon en conclut que la démocratie dégénère en tyrannie par excès de liberté.</p>
-        <p><b>Réfutation :</b> ces défauts ne condamnent pas le principe, ils montrent ce qui lui manque. Socrate, qui a vécu ces dérives, ne rejette pas la démocratie : il remet en question ce qui l'empêche de bien fonctionner, c'est-à-dire des citoyens qui votent selon leurs préjugés au lieu de chercher la justice. Un régime où la loi est au-dessus de tous reste plus juste qu'une aristocratie qui invoque les dieux à son avantage; il demande seulement des citoyens vertueux. La justice du régime dépend donc de l'éducation des citoyens, pas de son abandon.</p></div>
-      <div class="plan" id="p32"><b class="t">Le tirage au sort est-il une bonne façon de choisir ceux qui gouvernent ?</b>
-        <p><b>Thèse :</b> oui, parce qu'il protège la cité contre la concentration du pouvoir. Avec Clisthène, cinquante conseillers par tribu sont tirés au sort chaque année : le pouvoir circule entre plusieurs citoyens, ce qui limite les intrigues et empêche un petit nombre de s'installer. Le tirage au sort exprime l'égalité réelle des citoyens devant la loi. Exemple : l'ostracisme complète le dispositif en expulsant celui qui devient trop influent, pour éviter le basculement vers la tyrannie.</p>
-        <p><b>Objection :</b> gouverner demande un savoir. Pour Platon, le meilleur régime est l'aristocratie des philosophes, gouvernement des meilleurs guidé par la sagesse; tirer au sort, c'est confier la cité au hasard, donc à des ignorants, et c'est précisément pourquoi la démocratie a sombré dans le désordre à la fin du 5<sup>e</sup> siècle.</p>
-        <p><b>Réfutation :</b> le désordre d'Athènes n'est pas venu du tirage au sort mais des discours : ce sont des hommes riches et cultivés, formés à la rhétorique, qui ont poussé le peuple à des décrets contraires aux lois. Réserver le pouvoir aux « meilleurs » pose d'ailleurs la question que Socrate posait aux sophistes : qui sait vraiment ce qu'est la justice ? Le tirage au sort a au moins ce mérite : il n'exige pas de croire qu'une élite détient ce savoir. Il faut le garder, en formant les citoyens à la vertu.</p></div>
+      <div class="plan" id="p3"><b class="t">La démocratie athénienne est-elle un régime juste ?</b>
+        <p class="alt">Mêmes arguments si le sujet dit : « Le tirage au sort est-il une bonne façon de gouverner ? », « La démocratie directe est-elle préférable ? »</p>
+        <div class="pos pos-a"><b class="poslab">Position OUI, conseillée</b>
+          <div class="arg">
+            <p><b class="la">Argument 1</b> La démocratie athénienne place la loi au-dessus de tous et fait circuler le pouvoir. Avec Clisthène, cinquante conseillers par tribu et les juges sont tirés au sort, si bien que le pouvoir passe entre plusieurs mains et que les intrigues sont limitées; l'ostracisme expulse le citoyen devenu trop influent. Les Athéniens refusent de se prosterner devant un maître autre que la loi. Un régime où personne n'est au-dessus de la loi est juste dans son principe.</p>
+            <p><b class="lo">Objection</b> Pour Platon, gouverner demande un savoir : le meilleur régime est l'aristocratie des philosophes, guidée par la sagesse. Tirer au sort, c'est confier la cité au hasard, donc à des ignorants, et c'est pourquoi la démocratie a sombré dans le désordre.</p>
+            <p><b class="lr">Réfutation</b> Le désordre d'Athènes n'est pas venu du tirage au sort mais des discours : des hommes riches et cultivés, formés à la rhétorique, ont poussé le peuple à des décrets contraires aux lois. Réserver le pouvoir aux « meilleurs » suppose qu'une élite sait ce qu'est la justice; or Socrate a montré que ceux qui le prétendaient, les sophistes, ne le savaient pas. Le tirage au sort a au moins ce mérite : il n'exige pas de croire un savant sur parole.</p>
+          </div>
+          <div class="arg">
+            <p><b class="la">Argument 2</b> Ce régime est né d'une conquête d'égalité. Solon abolit les dettes des paysans, libère les esclaves d'origine grecque et remplace l'aristocratie de naissance par l'aristocratie de fortune, ce qui ouvre les charges publiques à tous. Ensuite, tout citoyen, sans distinction de classe, peut parler et voter à l'Assemblée, et certaines taxes ne visent que les plus riches pour réduire les écarts. C'est le passage de la justice divine, qui servait les puissants, à une justice humaine et conventionnelle.</p>
+            <p><b class="lo">Objection</b> Cette égalité est un mensonge : le « peuple » exclut les femmes, les esclaves et les étrangers, c'est-à-dire la majorité des habitants. Un régime qui ne reconnaît qu'une minorité de citoyens n'est pas juste.</p>
+            <p><b class="lr">Réfutation</b> L'exclusion est réelle, mais elle condamne les limites du régime, non son principe. Ce qu'Athènes a inventé, c'est l'idée que la loi vient des humains et s'applique à tous les citoyens également; c'est ce principe qui a permis ensuite d'élargir le cercle des citoyens. On juge un régime par rapport à ce qu'il remplace : une aristocratie de naissance qui invoquait les dieux à son avantage.</p>
+          </div>
+        </div>
+        <div class="pos pos-b"><b class="poslab">Position NON</b>
+          <div class="arg">
+            <p><b class="la">Argument 1</b> La démocratie athénienne repose sur le discours, donc sur la persuasion et non sur la justice. Puisque tout se décide à l'Assemblée par la parole, les jeunes riches paient les sophistes pour apprendre à persuader la foule et à influencer le vote; c'est la doxa, l'opinion fondée sur l'apparence, qui gouverne. À la fin du 5<sup>e</sup> siècle, des hommes cultivés ont ainsi poussé le peuple à des décrets contraires aux lois existantes, jusqu'au désordre total.</p>
+            <p><b class="lo">Objection</b> Ce sont des abus, pas le régime lui-même : la démocratie a ses garde-fous, l'ostracisme contre les trop influents et les lois au-dessus de tous.</p>
+            <p><b class="lr">Réfutation</b> Ces garde-fous n'ont empêché ni les décrets contraires aux lois ni la condamnation de Socrate. Socrate lui-même montre que la démocratie directe n'est juste que si tous les citoyens sont vertueux et savent ce qu'est la justice; or il constatait que la majorité suivait ses préjugés. Un régime dont la justice dépend d'une condition qui n'est jamais remplie n'est pas juste en pratique.</p>
+          </div>
+          <div class="arg">
+            <p><b class="la">Argument 2</b> La valeur dominante de ce régime, la liberté, le conduit à sa perte. Pour Platon, la démocratie dégénère en tyrannie par excès de liberté : quand chacun ne veille qu'à son intérêt, la cité passe du gouvernement du peuple au gouvernement d'un seul. Sans connaissance de la justice, la liberté de tous devient la liberté du plus fort de manipuler les autres.</p>
+            <p><b class="lo">Objection</b> La liberté est précisément ce que les Athéniens valorisaient le plus, et c'est une valeur juste : ils refusaient tout maître autre que la loi.</p>
+            <p><b class="lr">Réfutation</b> La liberté sans vertu devient la loi du plus fort. Le manuel le dit : si chacun ne veille qu'à son unique intérêt, la démocratie risque de dégénérer en tyrannie. La preuve est dans le procès de Socrate : cette cité libre a utilisé sa liberté pour condamner à mort l'homme le plus juste qu'elle avait, parce qu'il dérangeait les puissants.</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- T4 -->
     <div class="dtheme" id="t4">
       <h4 class="dth-title">Thème 4 · Le relativisme de la moralité et de la justice</h4>
-      <div class="dsavoir"><span class="blabel">Ce qu'il faut pouvoir écrire</span>
+      <div class="dsavoir"><span class="blabel">Ce qu'il faut savoir</span>
         <ul>
           <li><b>Doxa</b> (opinion non examinée, fondée sur l'apparence, l'habitude ou l'autorité) contre <b>logos</b> (discours rationnel, justifié, universel).</li>
-          <li><b>Protagoras</b>, 3 prémisses : rien de stable dans nos perceptions; la science est la sensation; tout est subjectif. Conséquences : pas de justice objective ni universelle; <b>justice = légalité</b>; la loi est juste <b>tant que la majorité la croit telle</b>; il faut respecter la convention.</li>
+          <li><b>Protagoras</b>, 3 prémisses : rien de stable dans nos perceptions; la science est la sensation; tout est subjectif. Conséquences : pas de justice objective ni universelle; <b>justice = légalité</b>; la loi est juste <b>tant que la majorité la croit telle</b>; il faut respecter la convention, le plus grand bien.</li>
           <li><b>Pragmatisme</b> : l'homme d'État fait adopter par la rhétorique les opinions les plus utiles, même des fictions; <b>le bien est remplacé par l'utile, la vérité par la vraisemblance</b>.</li>
-          <li><b>Socrate</b> rejette le relativisme : il existe des <b>définitions universelles</b>, les concepts ont une <b>essence</b>, le bien <b>n'est pas arbitraire</b>. Vertu-science : une seule vérité, un seul standard pour juger les actions. Le dilemme d'<b>Euthyphron</b> : une chose est-elle bonne parce qu'une autorité l'approuve, ou approuvée parce qu'elle est bonne ?</li>
-          <li>Le cours montre où mène le relativisme : chez les élèves des sophistes, l'éloge de la démocratie devient un <b>éloge de la tyrannie et de l'égoïsme</b>.</li>
+          <li><b>Socrate</b> rejette le relativisme : <b>définitions universelles</b>, les concepts ont une <b>essence</b>, le bien <b>n'est pas arbitraire</b>; vertu-science : une seule vérité, un seul standard. Dilemme d'<b>Euthyphron</b> : une chose est-elle bonne parce qu'une autorité l'approuve, ou approuvée parce qu'elle est bonne ?</li>
+          <li>Le relativisme a mené, chez les élèves des sophistes, à l'<b>éloge de la tyrannie et de l'égoïsme</b>.</li>
         </ul></div>
-      <div class="plan" id="p41"><b class="t">Une loi votée par la majorité est-elle nécessairement juste ?</b>
-        <p><b>Thèse :</b> non, car le juste et le légal ne sont pas la même chose. Socrate distingue la justice, vertu universelle qui nous dicte de ne jamais commettre le mal, et les lois, qui n'en sont que des copies imparfaites. Le législateur doit utiliser la compréhension universelle de la justice pour établir les lois; si les lois ne faisaient que refléter la majorité, il n'existerait aucun critère pour juger qu'une loi est mauvaise, et pourtant nous le faisons. Exemple : à la fin du 5<sup>e</sup> siècle, le peuple athénien a voté des décrets contraires aux lois existantes, entraîné par des beaux parleurs; personne ne dirait que ces décrets étaient justes parce que majoritaires.</p>
-        <p><b>Objection :</b> Protagoras répondrait que la justice n'a aucune qualité objective : elle dépend entièrement des décisions humaines. Puisque tout est subjectif et qu'il n'y a pas de justice universelle supérieure à la convention, justice et légalité sont synonymes, et la loi est parfaitement juste tant et aussi longtemps que la majorité la croit telle. Vouloir une justice au-dessus de la loi, c'est ouvrir la porte à celui qui prétend savoir mieux que tous.</p>
-        <p><b>Réfutation :</b> cette position se détruit elle-même. Si la justice n'est que ce que la majorité croit, alors la majorité ne peut jamais se tromper, et il devient impossible de dénoncer une injustice légale; or le cours montre que le relativisme de Protagoras a justement mené ses élèves à la loi du plus fort et à l'éloge de la tyrannie. De plus, le dilemme d'Euthyphron s'applique : si une loi est juste parce que la majorité l'approuve, la justice devient arbitraire, elle change avec chaque vote. Il faut donc admettre, avec Socrate, un critère universel qui permet de juger les lois.</p></div>
-      <div class="plan" id="p42"><b class="t">Le bien et le mal sont-ils relatifs à chacun ?</b>
-        <p><b>Thèse :</b> non. Le bien a une essence, la même pour tous, même si nous avons de la difficulté à la connaître. C'est la vertu-science de Socrate : la conduite vertueuse exige une connaissance rationnelle du bien qui n'est ni relative à chacun ni fondée sur l'opinion de la majorité, et ce bien est inné en chacun de nous, caché par nos préjugés. Exemple : quand Socrate réfute Euthyphron, celui-ci finit par admettre que ses définitions se contredisent; il ne dit pas « c'est ma vérité », il reconnaît qu'il ne sait pas, ce qui suppose qu'il y a quelque chose à savoir.</p>
-        <p><b>Objection :</b> pour Protagoras, la science est la sensation : le réel et le vrai dépendent de la manière dont chacun organise en discours ce qui apparaît à ses sens. Les perceptions se contredisent sans cesse, donc rien n'est stable, et le bien ne peut être qu'une opinion propre à chacun ou à chaque société.</p>
-        <p><b>Réfutation :</b> si tout était subjectif, la phrase « tout est subjectif » le serait aussi, et Protagoras n'aurait aucune raison de nous demander de respecter la convention comme « le plus grand bien ». Le relativiste a besoin, malgré lui, d'un bien qui vaut pour tous. En pratique, cette doctrine remplace le bien par l'utile et la vérité par la vraisemblance, et elle a mené Calliclès à affirmer que le tyran le plus cruel est l'homme le plus juste. Une théorie qui ne peut plus distinguer le tyran du sage a perdu le droit de parler du bien.</p></div>
+      <div class="plan" id="p4"><b class="t">Une loi votée par la majorité est-elle nécessairement juste ?</b>
+        <p class="alt">Mêmes arguments si le sujet dit : « La justice est-elle relative à chaque société ? », « Le bien et le mal dépendent-ils de l'opinion ? »</p>
+        <div class="pos pos-a"><b class="poslab">Position NON, conseillée</b>
+          <div class="arg">
+            <p><b class="la">Argument 1</b> Le juste et le légal ne sont pas la même chose. Socrate distingue la justice, vertu universelle qui nous dicte de ne jamais commettre le mal, et les lois, qui n'en sont que des copies imparfaites; le législateur doit utiliser la compréhension universelle de la justice pour les établir. Si la loi votée était juste par définition, il n'existerait aucun critère pour dire qu'une loi est mauvaise; or nous le faisons sans cesse, et Athènes elle-même a voté, à la fin du 5<sup>e</sup> siècle, des décrets contraires à ses propres lois.</p>
+            <p><b class="lo">Objection</b> Protagoras répondrait que la justice n'a aucune qualité objective : elle dépend entièrement des décisions humaines. Puisqu'il n'existe pas de justice universelle supérieure à la convention, justice et légalité sont synonymes, et la loi est parfaitement juste tant que la majorité la croit telle.</p>
+            <p><b class="lr">Réfutation</b> Cette position se détruit elle-même. Si la justice n'est que ce que la majorité croit, la majorité ne peut jamais se tromper, et dénoncer une injustice légale devient impossible. Le cours montre où cela mène : le relativisme de Protagoras a conduit ses élèves à la loi du plus fort et à l'éloge de la tyrannie. Un critère qui ne permet plus de condamner le tyran n'est pas un critère de justice.</p>
+          </div>
+          <div class="arg">
+            <p><b class="la">Argument 2</b> Le bien a une essence, la même pour tous. Selon la vertu-science de Socrate, agir bien exige une connaissance rationnelle du bien qui n'est ni relative à chacun ni fondée sur l'opinion de la majorité; ce bien est inné en chacun, caché par nos préjugés. Le dilemme d'Euthyphron le confirme : si une chose était juste parce qu'une autorité l'approuve, la justice deviendrait arbitraire et changerait à chaque vote; elle doit donc être approuvée parce qu'elle est juste.</p>
+            <p><b class="lo">Objection</b> Pour Protagoras, la science est la sensation : le réel et le vrai dépendent de la manière dont chacun organise ce qui apparaît à ses sens, et nos perceptions se contredisent sans cesse. Rien n'étant stable, le bien ne peut être qu'une opinion propre à chacun ou à chaque société.</p>
+            <p><b class="lr">Réfutation</b> Si tout était subjectif, la phrase « tout est subjectif » le serait aussi et n'obligerait personne. Protagoras lui-même a besoin d'un bien qui vaut pour tous quand il demande de respecter la convention comme « le plus grand bien ». Et sa doctrine, en remplaçant le bien par l'utile et la vérité par la vraisemblance, a produit Calliclès, pour qui le tyran le plus cruel est l'homme le plus juste : une théorie qui ne distingue plus le sage du tyran a perdu le droit de parler du bien.</p>
+          </div>
+        </div>
+        <div class="pos pos-b"><b class="poslab">Position OUI</b>
+          <div class="arg">
+            <p><b class="la">Argument 1</b> La justice n'existe pas dans la nature, elle naît de la convention. Protagoras l'explique par sa théorie du développement des sociétés : les humains ont quitté un état primitif égoïste pour un contrat d'entraide mutuelle, et les lois qu'ils se donnent garantissent sécurité et égalité. Justice et légalité sont donc synonymes; Athènes elle-même est passée d'une justice divine, invoquée par les puissants, à une justice humaine votée par les citoyens.</p>
+            <p><b class="lo">Objection</b> Socrate objecte que le juste est distinct du légal : les lois ne sont que des copies imparfaites d'une justice universelle, et une loi peut être injuste.</p>
+            <p><b class="lr">Réfutation</b> Copies imparfaites de quoi ? Socrate n'a jamais réussi à définir cette justice universelle : le dialogue avec Euthyphron se termine en aporie, sans définition. Tant que cette essence reste introuvable, la seule justice réelle est celle que la convention établit et que la majorité reconnaît; le reste est une promesse.</p>
+          </div>
+          <div class="arg">
+            <p><b class="la">Argument 2</b> Ce qui compte pour la vie commune, c'est l'utile, et l'utile dépend du contexte. Le pragmatisme de Protagoras montre que l'homme d'État doit faire adopter, par la rhétorique, les opinions qui conviennent le mieux à la situation de la cité, pour éviter la guerre continuelle des intérêts. Une loi votée par la majorité est juste parce qu'elle exprime ce que cette société, à ce moment, juge utile à sa cohésion.</p>
+            <p><b class="lo">Objection</b> Remplacer le bien par l'utile et la vérité par la vraisemblance ouvre la porte à la manipulation; c'est ainsi que l'éloge de la démocratie est devenu, chez Calliclès, un éloge de la tyrannie.</p>
+            <p><b class="lr">Réfutation</b> Protagoras condamne la loi du plus fort : pour lui, la convention est précisément ce qui protège les faibles contre les forts, et sans respect de la loi, la vie humaine régresse vers le désordre et la guerre perpétuelle. Le relativisme n'implique pas l'immoralité de Calliclès; il implique le respect des lois que chaque société se donne, ce qui est le contraire de la tyrannie.</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- T5 -->
     <div class="dtheme" id="t5">
       <h4 class="dth-title">Thème 5 · Les conventions sociales contre la loi du plus fort</h4>
-      <div class="dsavoir"><span class="blabel">Ce qu'il faut pouvoir écrire</span>
+      <div class="dsavoir"><span class="blabel">Ce qu'il faut savoir</span>
         <ul>
-          <li>Point de départ commun : opposition <b>nature / loi</b>. Théorie du développement des sociétés de <b>Protagoras</b> : état primitif égoïste → lent apprentissage → <b>contrat d'entraide mutuelle</b> → lois qui garantissent <b>sécurité et égalité</b> → éducation aux vertus. Conclusion : respecter la convention, qui évite la tyrannie des puissants.</li>
-          <li>Conclusion inverse chez les autres sophistes : la loi n'est qu'une convention <b>artificielle</b>, donc désobéir quand on ne risque rien. <b>Antiphon</b> : invention des faibles pour freiner les forts. <b>Thrasymaque</b> : la justice est la loi du plus fort, le fort fait les lois dans son intérêt, le faible obéit par peur. <b>Glaucon</b> : le berger de Lydie (l'anneau de Gygès), personne ne reste juste sans conséquences. <b>Calliclès</b> : les forts doivent mépriser la loi; « l'homme le plus juste est le tyran le plus cruel ».</li>
-          <li><b>Socrate</b> : la justice est la vertu de ne jamais commettre le mal; répondre au mal par le mal nous rend semblables aux méchants; on ne désobéit jamais aux lois car elles visent la justice; celui qui fait le mal se nuit d'abord à lui-même (vertu-science). Il accepte sa mort plutôt que de fuir.</li>
+          <li>Point de départ commun : opposition <b>nature / loi</b>. <b>Protagoras</b> : état primitif égoïste → <b>contrat d'entraide mutuelle</b> → lois qui garantissent <b>sécurité et égalité</b> → l'éducation fait rejeter la nature querelleuse. Conclusion : respecter la convention, qui évite la tyrannie des puissants.</li>
+          <li>Conclusion inverse chez les autres sophistes : la loi est <b>artificielle</b>, donc désobéir quand on ne risque rien. <b>Antiphon</b> : invention des faibles pour freiner les forts. <b>Thrasymaque</b> : la justice est la loi du plus fort; le fort fait les lois dans son intérêt, le faible obéit par peur. <b>Glaucon</b> : le berger de Lydie (l'anneau de Gygès), personne ne reste juste sans conséquence. <b>Calliclès</b> : les forts doivent mépriser la loi; « l'homme le plus juste est le tyran le plus cruel ».</li>
+          <li><b>Socrate</b> : la justice est la vertu de ne jamais commettre le mal; celui qui fait le mal se nuit d'abord à lui-même (vertu-science); il accepte sa mort plutôt que de fuir.</li>
         </ul></div>
-      <div class="plan" id="p51"><b class="t">La justice n'est-elle que la loi du plus fort ?</b>
-        <p><b>Thèse :</b> non. La justice est une vertu, pas un rapport de force : « la vertu qui nous dicte de ne jamais commettre le mal », dit Socrate. Si la justice n'était que la loi du plus fort, elle changerait de contenu à chaque changement de maître, et le mot ne voudrait plus rien dire; or nous appelons injuste un tyran précisément parce qu'il est le plus fort et qu'il abuse. Protagoras lui-même, pourtant sophiste, montre que les lois sont nées d'un contrat d'entraide pour garantir la sécurité et l'égalité contre la loi du plus fort de l'état primitif. Exemple : l'ostracisme athénien expulse le citoyen trop puissant; la cité considère donc la force excessive comme une menace pour la justice, non comme sa source.</p>
-        <p><b>Objection :</b> Thrasymaque, dans La République, soutient que la loi de la nature est faite de telle manière que le plus fort commande et établit les lois dans son propre intérêt; le faible n'obéit que pour éviter les représailles, et plus le maître est cruel, plus la foule le loue comme un bienfaiteur. Glaucon ajoute l'anneau du berger de Lydie : celui qui peut agir sans conséquence commet le mal. La justice ne serait qu'un masque de la peur.</p>
-        <p><b>Réfutation :</b> l'objection décrit ce que font certains hommes, pas ce qu'est la justice. Que des faibles obéissent par peur ne prouve pas que la loi est juste parce que le fort la fait; cela prouve que la loi peut être injuste, ce qui suppose un critère de justice extérieur à la force. Et Socrate répond à Glaucon par la vertu-science : celui qui commet le mal avec l'anneau se nuit à lui-même, il rend son âme semblable à celle des méchants; s'il connaissait vraiment le bien, il n'aurait aucune raison de l'utiliser, car c'est la vertu qui apporte le bonheur. Calliclès en tire la conséquence absurde qui condamne la thèse : le tyran le plus cruel serait l'homme le plus juste.</p></div>
-      <div class="plan" id="p52"><b class="t">Respecterait-on les lois si l'on pouvait agir sans conséquence ?</b>
-        <p><b>Thèse :</b> oui, du moins celui qui comprend ce qu'est la justice. Pour Socrate, la justice consiste à ne jamais commettre le mal, et ce « jamais » est absolu : il ne dépend ni des témoins ni des punitions. Celui qui commet le mal se rend semblable aux méchants et fait du tort à sa propre âme et à sa raison; la sanction extérieure n'est pas ce qui rend l'acte mauvais. Exemple : une personne qui rapporte un portefeuille trouvé sans témoin ne le fait pas par peur, mais parce qu'elle refuse de devenir une voleuse.</p>
-        <p><b>Objection :</b> Glaucon raconte l'histoire du berger au service du roi de Lydie : muni d'un anneau qui rend invisible, il séduit la reine, tue le roi et prend le trône. Selon lui, quiconque possédait un tel pouvoir ne considérerait plus ce qui est juste ou injuste, car il ne pourrait résister à commettre le mal dans son intérêt; le respect de la loi n'est jamais volontaire, il n'est qu'un obstacle à notre nature égoïste.</p>
-        <p><b>Réfutation :</b> Glaucon suppose que le bien de chacun est de satisfaire ses désirs; c'est exactement la prémisse que la vertu-science renverse. Si nous faisons le mal, c'est par ignorance du bien : le berger croit que le trône le rendra heureux, alors que l'injustice abîme son âme. Un jugement sain ne serait pas tenté par l'anneau, puisque c'est la vertu qui apporte le bonheur. Socrate l'a prouvé par sa vie : il pouvait fuir la prison sans conséquence, ses amis avaient tout préparé, et il a choisi de rester pour ne pas se placer au-dessus des lois. L'anneau ne révèle pas notre nature, il révèle notre ignorance.</p></div>
+      <div class="plan" id="p5"><b class="t">La justice n'est-elle que la loi du plus fort ?</b>
+        <p class="alt">Mêmes arguments si le sujet dit : « Respecterait-on les lois sans conséquences ? », « Les lois ne sont-elles qu'une invention des faibles ? »</p>
+        <div class="pos pos-a"><b class="poslab">Position NON, conseillée</b>
+          <div class="arg">
+            <p><b class="la">Argument 1</b> La justice est une vertu, non un rapport de force. Socrate la définit comme la vertu qui nous dicte de ne jamais commettre le mal : elle qualifie celui qui agit, pas celui qui gagne. Si la justice n'était que la volonté du plus fort, elle changerait de contenu à chaque nouveau maître et le mot ne désignerait plus rien; or, lorsque nous appelons un tyran injuste, c'est précisément parce qu'il est le plus fort et qu'il abuse. Notre jugement suppose un critère indépendant de la force.</p>
+            <p><b class="lo">Objection</b> Thrasymaque, dans La République de Platon, soutient que la loi de la nature veut que le plus fort commande et établisse les lois dans son propre intérêt; le faible n'obéit que par peur des représailles, et plus le maître est cruel, plus la foule le loue comme un bienfaiteur.</p>
+            <p><b class="lr">Réfutation</b> Cette objection décrit ce que font certains hommes, non ce qu'est la justice. Que des faibles obéissent par peur prouve seulement qu'une loi peut être injuste, ce qui suppose encore un critère extérieur à la force. Calliclès en tire d'ailleurs une conséquence qui condamne la thèse : l'homme le plus juste serait le tyran le plus cruel, ce que personne, pas même la foule qui le subit, ne peut penser sérieusement.</p>
+          </div>
+          <div class="arg">
+            <p><b class="la">Argument 2</b> Les lois elles-mêmes sont nées pour limiter la force. Protagoras, pourtant sophiste, explique que les humains ont quitté un état primitif où régnait l'égoïsme sauvage pour conclure un contrat d'entraide mutuelle; les lois garantissent depuis la sécurité et l'égalité de tous. La justice est donc l'inverse de la loi du plus fort : elle est la convention qui l'empêche. À Athènes, l'ostracisme de Clisthène expulse même le citoyen devenu trop puissant.</p>
+            <p><b class="lo">Objection</b> Antiphon répond que la loi n'est qu'une invention de la majorité, composée de faibles impuissants à réaliser leurs désirs, qui veulent empêcher les plus forts de les dominer; puisqu'elle est artificielle, il est justifié d'y désobéir chaque fois qu'on ne risque pas de se faire prendre.</p>
+            <p><b class="lr">Réfutation</b> Si la loi est l'invention des faibles, c'est qu'elle a réussi à limiter la force, ce qui prouve justement que la force n'est pas la justice. Et à celui qui désobéit en cachette, la vertu-science de Socrate répond qu'en commettant le mal, il rend son âme semblable à celle des méchants et se nuit d'abord à lui-même, puisque c'est la vertu qui apporte le bonheur. L'anneau de Gygès ne révèle pas notre nature, il révèle notre ignorance du bien.</p>
+          </div>
+        </div>
+        <div class="pos pos-b"><b class="poslab">Position OUI</b>
+          <div class="arg">
+            <p><b class="la">Argument 1</b> Dans les faits, celui qui commande établit les lois dans son intérêt. Thrasymaque le montre : la loi de la nature veut que le plus fort commande, le faible obéit uniquement pour éviter les représailles, et la foule finit par louer son tyran. L'histoire d'Athènes le confirme : les riches propriétaires ont d'abord inventé une justice divine à leur avantage, puis des hommes riches et cultivés ont poussé le peuple aux décrets qui les servaient.</p>
+            <p><b class="lo">Objection</b> Socrate objecte que la justice est une vertu distincte des lois; le fait même qu'on puisse appeler un tyran injuste prouve un critère au-delà de la force.</p>
+            <p><b class="lr">Réfutation</b> Ce critère, Socrate ne l'a jamais défini : son dialogue avec Euthyphron finit en aporie. En attendant cette définition introuvable, la seule justice qui s'applique réellement est celle que le pouvoir impose, et la condamnation de Socrate par la majorité en est la preuve la plus cruelle : le plus juste des Athéniens est mort parce qu'il n'était pas le plus fort.</p>
+          </div>
+          <div class="arg">
+            <p><b class="la">Argument 2</b> Personne ne reste juste sans conséquence. Glaucon raconte l'histoire du berger de Lydie : muni d'un anneau qui rend invisible, il séduit la reine, tue le roi et prend le trône. Quiconque possédait un tel pouvoir ne considérerait plus le juste et l'injuste; le respect de la loi n'est jamais volontaire, la loi n'est qu'un obstacle à la nature humaine. La justice n'est donc qu'un compromis imposé par la peur, c'est-à-dire par la force.</p>
+            <p><b class="lo">Objection</b> Socrate a prouvé le contraire par sa vie : il pouvait fuir la prison sans conséquence et il a choisi de rester, parce que celui qui commet le mal se nuit à lui-même.</p>
+            <p><b class="lr">Réfutation</b> Socrate est l'exception qui confirme la règle : il a fallu un homme unique, et la cité entière l'a condamné précisément pour cette exception. Une justice que seul un philosophe sur des milliers respecte sans y être forcé n'est pas ce qui gouverne les cités; ce qui les gouverne, c'est la force qui fait respecter les lois.</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- T6 -->
     <div class="dtheme" id="t6">
       <h4 class="dth-title">Thème 6 · La vertu-science</h4>
-      <div class="dsavoir"><span class="blabel">Ce qu'il faut pouvoir écrire</span>
+      <div class="dsavoir"><span class="blabel">Ce qu'il faut savoir</span>
         <ul>
-          <li>Définition : <b>rapport étroit entre l'action moralement bonne et la connaissance rationnelle</b>. Être vertueux exige de connaître le bien, comme tout art exige un savoir; ce bien n'est ni relatif ni majoritaire : une seule vérité, un seul standard.</li>
-          <li>Le bien est <b>inné</b>, dans la profondeur de l'âme; les <b>opinions et préjugés</b> nous en cachent l'accès; il faut <b>désapprendre</b>, atteindre le <b>degré zéro du savoir</b> par la discussion réfutative (elenchos, aporie), puis chercher (maïeutique). La philosophie commence par la <b>conscience de son ignorance</b>.</li>
-          <li>Conséquence : <b>le mal vient de l'ignorance</b>. Avec un jugement sain, aucune passion ne ferait obstacle à la vertu, car <b>c'est la vertu qui apporte le bonheur</b>. Nul n'est méchant volontairement.</li>
-          <li>La tâche du philosophe : faire prendre conscience aux autres que le bien est en eux, et les amener à soigner leur <b>âme</b> plutôt que leur corps (justice et piété plutôt que richesses).</li>
+          <li>Définition : <b>rapport étroit entre l'action moralement bonne et la connaissance rationnelle</b>. Être vertueux exige de connaître le bien, comme tout art exige un savoir; ce bien n'est ni relatif ni majoritaire.</li>
+          <li>Le bien est <b>inné</b>, dans la profondeur de l'âme; les <b>opinions et préjugés</b> nous en cachent l'accès; il faut <b>désapprendre</b>, atteindre le <b>degré zéro du savoir</b> par la discussion réfutative (elenchos, aporie), puis chercher (maïeutique). <b>Ignorance simple</b> (je sais que je ne sais pas) contre <b>ignorance qui s'ignore</b>.</li>
+          <li>Conséquence : <b>le mal vient de l'ignorance</b>. Avec un jugement sain, aucune passion ne ferait obstacle à la vertu, car <b>c'est la vertu qui apporte le bonheur</b>. Soigner son <b>âme</b> plutôt que son corps.</li>
         </ul></div>
-      <div class="plan" id="p61"><b class="t">Le mal vient-il de l'ignorance ?</b>
-        <p><b>Thèse :</b> oui. Selon la vertu-science de Socrate, agir bien exige de connaître le bien, comme construire une maison exige de connaître l'architecture. Personne ne désire son propre malheur; si quelqu'un fait le mal, c'est qu'il croit, à tort, que cela lui est bon. Son erreur est une erreur de jugement, donc une ignorance. Si son jugement était sain, aucune passion ne pourrait faire obstacle à sa volonté d'agir vertueusement, puisque c'est la vertu qui apporte le bonheur. Exemple : le voleur croit que l'argent fera son bonheur; il ignore que l'injustice abîme son âme et le rend semblable aux méchants.</p>
-        <p><b>Objection :</b> l'expérience semble contredire Socrate. On peut savoir qu'une chose est mal et la faire quand même, par colère, par désir ou par faiblesse : le fumeur connaît les risques et continue, la personne qui se venge sait que la vengeance est mauvaise. Le mal viendrait donc de la faiblesse de la volonté, pas de l'ignorance.</p>
-        <p><b>Réfutation :</b> ce que l'objection appelle « savoir » n'est qu'une opinion, une doxa apprise et non examinée. Le fumeur « sait » les risques comme on sait une date; il ne sait pas, au sens fort, que sa santé vaut plus que son plaisir, sinon il agirait autrement. La vertu-science ne parle pas d'un savoir théorique ou académique, mais d'une connaissance découverte dans la profondeur de l'âme, après avoir désappris ses préjugés. Celui qui cède à la colère ignore, au moment d'agir, que la vengeance le rend semblable au méchant. La faiblesse de la volonté est donc une ignorance qui s'ignore.</p></div>
-      <div class="plan" id="p62"><b class="t">Suffit-il de se croire moralement bon pour l'être ?</b>
-        <p><b>Thèse :</b> non. Se croire bon, c'est l'ignorance qui s'ignore, la pire selon Socrate : croire savoir ce qu'on ne sait pas. La vertu n'est pas une opinion sur soi-même mais une connaissance du bien qui exige des efforts, un examen de soi et une recherche constante de la vérité. Exemple : Euthyphron est certain d'être pieux en accusant son père; quatre définitions réfutées plus tard, il ne sait plus ce qu'est la piété, et sa certitude n'était que de la doxa.</p>
-        <p><b>Objection :</b> la majorité des gens sont honnêtes sans avoir jamais philosophé; ils suivent les conventions de leur cité, comme le recommande Protagoras, et cela suffit à la vie commune. Exiger un examen de soi permanent, c'est réserver la vertu à quelques philosophes.</p>
-        <p><b>Réfutation :</b> suivre la convention n'est pas être vertueux, c'est du conformisme irréfléchi, précisément ce que Socrate dénonce. Une démocratie de citoyens qui se croient bons sans savoir ce qu'est la justice est celle qui, à la fin du 5<sup>e</sup> siècle, a voté des décrets contraires à ses propres lois et condamné Socrate. Et l'examen de soi n'est pas réservé aux philosophes : Socrate discute sur les places publiques avec des gens de toutes les classes, car le bien est inné en chacun. La vertu est accessible à tous, mais jamais gratuite.</p></div>
+      <div class="plan" id="p6"><b class="t">Le mal vient-il de l'ignorance ?</b>
+        <p class="alt">Mêmes arguments si le sujet dit : « Suffit-il de connaître le bien pour le faire ? », « Peut-on faire le mal volontairement ? » (inverser les positions).</p>
+        <div class="pos pos-a"><b class="poslab">Position OUI, conseillée</b>
+          <div class="arg">
+            <p><b class="la">Argument 1</b> Personne ne désire son propre malheur. Selon la vertu-science de Socrate, agir bien exige de connaître le bien, comme construire une maison exige de connaître l'architecture; celui qui fait le mal croit, à tort, que cela lui est bon. Son erreur est une erreur de jugement, donc une ignorance. Si son jugement était sain, aucune passion ne pourrait faire obstacle à sa volonté d'agir vertueusement, puisque c'est la vertu qui apporte le bonheur. Le voleur croit que l'argent fera son bonheur; il ignore que l'injustice abîme son âme.</p>
+            <p><b class="lo">Objection</b> L'expérience contredit Socrate : on peut savoir qu'une chose est mal et la faire quand même, par colère, par désir ou par faiblesse. Le fumeur connaît les risques et continue; celui qui se venge sait que la vengeance est mauvaise. Le mal viendrait de la faiblesse de la volonté, non de l'ignorance.</p>
+            <p><b class="lr">Réfutation</b> Ce que l'objection appelle « savoir » n'est qu'une doxa, une opinion apprise et non examinée. Le fumeur « sait » les risques comme on sait une date; il ne sait pas, au sens fort, que sa santé vaut plus que son plaisir, sinon il agirait autrement. La vertu-science ne parle pas d'un savoir théorique ou académique mais d'une connaissance découverte dans la profondeur de l'âme, après avoir désappris ses préjugés. La faiblesse de la volonté est une ignorance qui s'ignore.</p>
+          </div>
+          <div class="arg">
+            <p><b class="la">Argument 2</b> Le bien est inné mais caché par les préjugés, et c'est pourquoi la méthode de Socrate guérit l'ignorance et non la volonté. Par l'elenchos, il réfute la définition qu'on croyait solide; par l'aporie, l'interlocuteur découvre qu'il ne savait pas; par la maïeutique, il accouche d'un savoir plus vrai. Euthyphron, certain d'être pieux en accusant son père, découvre en quatre définitions qu'il ignore ce qu'est la piété : son mal n'était pas une mauvaise volonté, mais une ignorance qui s'ignorait.</p>
+            <p><b class="lo">Objection</b> Calliclès et Thrasymaque savent parfaitement ce qu'ils font : ils choisissent lucidement de dominer et de satisfaire leurs désirs. On ne peut pas dire qu'ils ignorent le bien; ils le refusent.</p>
+            <p><b class="lr">Réfutation</b> Leur lucidité est la forme la plus grave de l'ignorance qui s'ignore : ils croient que le bien est la satisfaction de tous les désirs, alors que Socrate montre que c'est la vertu qui apporte le bonheur et que le tyran, en faisant le mal, se nuit d'abord à lui-même. Leur erreur est une erreur sur ce qu'est le bien; ce n'est donc pas un refus du bien, mais une ignorance de celui-ci.</p>
+          </div>
+        </div>
+        <div class="pos pos-b"><b class="poslab">Position NON</b>
+          <div class="arg">
+            <p><b class="la">Argument 1</b> Le mal vient des passions et des intérêts, non du manque de savoir. La démocratie athénienne s'est dégradée parce que des hommes riches et cultivés, formés par les sophistes, ont poussé le peuple à des décrets contraires au bien commun; ils n'étaient pas ignorants, ils étaient intéressés. Le discours double de Protagoras enseigne justement à défendre n'importe quelle position : c'est un savoir mis au service de l'intérêt.</p>
+            <p><b class="lo">Objection</b> Socrate répondrait que ces hommes cultivés ignoraient le vrai bien, celui de l'âme : ils possédaient un savoir technique, la rhétorique, sans la connaissance du bien qui seule rend vertueux.</p>
+            <p><b class="lr">Réfutation</b> Distinguer le savoir du « vrai savoir » rend la thèse invérifiable : tout méchant sera déclaré ignorant par définition, et aucun exemple ne pourra jamais la contredire. Glaucon montre au contraire qu'avec l'anneau de Gygès, même celui qui connaît la justice l'abandonne dès qu'il ne risque rien : le savoir ne protège pas du mal, seule la crainte le fait.</p>
+          </div>
+          <div class="arg">
+            <p><b class="la">Argument 2</b> Si le mal venait de l'ignorance, il suffirait d'enseigner pour rendre vertueux. Or les sophistes ont enseigné pendant des décennies et ont produit Calliclès, pour qui le tyran le plus cruel est l'homme le plus juste; et Socrate lui-même, malgré tout son art, n'a pas rendu Euthyphron plus pieux, qui s'enfuit sans avoir rien appris. La connaissance ne fait pas la vertu.</p>
+            <p><b class="lo">Objection</b> Les sophistes enseignaient la rhétorique, l'art de l'utile, non le bien; et Socrate ne transmet pas un savoir, il fait accoucher, ce qui exige le courage de se questionner sans cesse.</p>
+            <p><b class="lr">Réfutation</b> Si le bien inné ne peut être ni enseigné ni transmis, et s'il exige du courage, alors ce dont parle Socrate n'est plus un savoir mais une disposition de la volonté. Il faut vouloir se questionner avant de savoir. Le mal n'est donc pas d'abord une erreur, c'est un choix : celui de ne pas vouloir savoir.</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- T7 -->
     <div class="dtheme" id="t7">
       <h4 class="dth-title">Thème 7 · Le procès politique de Socrate</h4>
-      <div class="dsavoir"><span class="blabel">Ce qu'il faut pouvoir écrire</span>
+      <div class="dsavoir"><span class="blabel">Ce qu'il faut savoir</span>
         <ul>
           <li>399 av. J.-C. Accusations officielles : <b>corrompre la jeunesse</b> et <b>introduire de nouvelles divinités</b>. Réponses (Apologie) : on le confond avec les sophistes (argument faible qui l'emporte); la vertu ne se troque pas contre de l'argent; il n'est pas athée et respecte les dieux de la cité.</li>
           <li>Vraies raisons : les puissants voulaient se débarrasser de celui qui <b>démasquait leur prétention et leur ignorance</b>, et leurs fils leur répondaient avec sa méthode.</li>
-          <li>Procès <b>politique</b> : on lui reproche d'avoir remis en question la démocratie; en réalité il critiquait <b>ce qui l'empêchait de bien fonctionner</b>. Laramée : « si chacun ne veille qu'à son unique intérêt, la démocratie risque de dégénérer en tyrannie et en loi du plus fort ». La démocratie directe exige des citoyens <b>vertueux</b> qui savent ce qu'est la justice; or la majorité suivait les <b>préjugés et les opinions</b>, et les sophistes prétendaient dicter la conduite sans connaître le bien commun.</li>
-          <li>Il ne suffit pas de se croire bon pour l'être; la vertu exige des efforts, un examen de soi, une recherche constante.</li>
+          <li>Procès <b>politique</b> : on lui reproche d'avoir remis en question la démocratie; en réalité il critiquait <b>ce qui l'empêchait de bien fonctionner</b>. Laramée : « si chacun ne veille qu'à son unique intérêt, la démocratie risque de dégénérer en tyrannie et en loi du plus fort ». La démocratie directe exige des citoyens <b>vertueux</b>; or la majorité suivait les <b>préjugés</b>, et les sophistes prétendaient dicter la conduite sans connaître le bien commun.</li>
         </ul></div>
-      <div class="plan" id="p71"><b class="t">Socrate était-il un ennemi de la démocratie ?</b>
-        <p><b>Thèse :</b> non, il en était le critique le plus utile. Ce qu'on lui reproche réellement, c'est d'avoir remis en question la démocratie; mais ce qu'il remettait en question, c'est ce qui l'empêchait de bien fonctionner. Une démocratie directe, où tous les citoyens gouvernent, exige que chacun gouverne dans l'intérêt de tous, donc que chacun sache ce qu'est la justice; sinon, comme le dit le manuel, elle dégénère en tyrannie et en loi du plus fort. En interrogeant les sophistes et les puissants qui prétendaient savoir, Socrate faisait exactement ce qu'un régime fondé sur le discours a besoin qu'on fasse. Exemple : il passe sa vie sur les places publiques à discuter avec des gens de toutes les classes sociales, ce qui est l'attitude d'un citoyen, non d'un conspirateur.</p>
-        <p><b>Objection :</b> Socrate a été jugé par un tribunal populaire régulier, selon les lois d'Athènes, et condamné par la majorité. Il dénonçait le conformisme du peuple, refusait de flatter l'Assemblée et affirmait que la majorité suivait ses préjugés plutôt que la vérité. Un homme qui juge le peuple incapable de savoir ce qui est juste est bien un adversaire de son pouvoir.</p>
-        <p><b>Réfutation :</b> critiquer les électeurs n'est pas attaquer le régime : c'est vouloir qu'il soit à la hauteur de son principe. Les vrais adversaires de la démocratie, ce sont les hommes riches et cultivés qui, à la fin du 5<sup>e</sup> siècle, poussaient le peuple à des décrets contraires aux lois, et les sophistes qui vendaient l'art de faire triompher l'argument le plus faible. Socrate, lui, a prouvé son respect du régime par sa mort : condamné injustement, il a refusé de fuir pour ne pas se placer au-dessus des lois de la cité. On ne meurt pas ainsi pour un régime qu'on veut détruire.</p></div>
-      <div class="plan" id="p72"><b class="t">La condamnation de Socrate était-elle justifiée ?</b>
-        <p><b>Thèse :</b> non, car les accusations officielles ne tenaient pas et cachaient un motif politique. Socrate n'a pas corrompu la jeunesse : il ne vendait aucun savoir, ne promettait pas le succès et se contentait de questionner; ceux qui l'accusaient de faire triompher l'argument le plus faible le confondaient avec les sophistes. Il n'était pas athée et ne rejetait pas les dieux de la cité. Selon l'Apologie, les puissants voulaient se débarrasser de lui parce qu'il démasquait leur prétention et leur ignorance devant leurs propres fils. Exemple : à l'accusation de se faire payer, il répond que la vertu ne peut être troquée contre de l'argent, ce qui le distingue précisément des sophistes.</p>
-        <p><b>Objection :</b> un sophiste dirait que la justice, c'est la loi de la cité; le tribunal populaire a suivi la procédure, la majorité a tranché, donc la condamnation est juste par définition (Protagoras : la loi est juste tant que la majorité la croit telle). Socrate lui-même a reconnu l'autorité du tribunal en acceptant sa peine.</p>
-        <p><b>Réfutation :</b> l'objection confond le légal et le juste, distinction que Socrate maintient jusqu'au bout. La condamnation était légale, donc il s'y est soumis pour ne pas commettre le mal contre la cité; mais elle n'était pas juste, car elle punissait un homme qui n'avait commis aucun mal. Son obéissance ne prouve pas la justice du verdict, elle prouve sa propre vertu. Si la majorité rendait juste tout ce qu'elle décide, aucun procès ne pourrait jamais être une erreur, et il faudrait dire que les Athéniens ont eu raison de tuer le plus sage d'entre eux.</p></div>
+      <div class="plan" id="p7"><b class="t">La condamnation de Socrate était-elle justifiée ?</b>
+        <p class="alt">Mêmes arguments si le sujet dit : « Socrate était-il un ennemi de la démocratie ? », « Le procès de Socrate était-il un procès politique ? »</p>
+        <div class="pos pos-a"><b class="poslab">Position NON, conseillée</b>
+          <div class="arg">
+            <p><b class="la">Argument 1</b> Les accusations officielles ne tiennent pas. Socrate n'a pas corrompu la jeunesse : il ne vendait aucun savoir, ne promettait pas le succès et se contentait de questionner; ceux qui l'accusaient de faire triompher l'argument le plus faible le confondaient avec les sophistes, dont c'est la technique. Il n'était pas athée et ne rejetait pas les dieux de la cité. À l'accusation de se faire payer, il répond que la vertu ne peut être troquée contre de l'argent, ce qui le distingue précisément des sophistes.</p>
+            <p><b class="lo">Objection</b> Ces réponses viennent de l'Apologie, écrite par Platon, son élève, une source partiale. Et il est vrai que ses jeunes disciples se mettaient à répondre à leurs pères et aux magistrats avec sa méthode, ce qui ébranlait l'autorité dans la cité.</p>
+            <p><b class="lr">Réfutation</b> Même en lisant l'Apologie avec prudence, aucun fait précis n'est reproché à Socrate : apprendre à un jeune à demander des raisons n'est pas le corrompre, c'est l'examiner. Les puissants n'aimaient pas que leurs fils leur répondent parce que cela démasquait leur prétention et leur ignorance. Ce que la cité punissait, c'était l'examen lui-même, et une cité qui punit l'examen ne peut invoquer la justice.</p>
+          </div>
+          <div class="arg">
+            <p><b class="la">Argument 2</b> Ce fut un procès politique. Ce qu'on reproche réellement à Socrate, c'est d'avoir remis en question la démocratie; or il remettait en question ce qui l'empêchait de bien fonctionner. Une démocratie directe exige que chacun gouverne dans l'intérêt de tous, donc que chacun sache ce qu'est la justice; sinon, dit le manuel, elle dégénère en tyrannie et en loi du plus fort. En interrogeant les sophistes et les puissants qui prétendaient savoir, Socrate faisait exactement ce qu'un régime fondé sur le discours a besoin qu'on fasse.</p>
+            <p><b class="lo">Objection</b> Un sophiste dirait que la justice, c'est la loi de la cité : le tribunal populaire a suivi la procédure, la majorité a tranché, donc la condamnation est juste par définition, puisque la loi est juste tant que la majorité la croit telle.</p>
+            <p><b class="lr">Réfutation</b> L'objection confond le légal et le juste, distinction que Socrate maintient jusqu'au bout. La condamnation était légale, et il s'y est soumis pour ne pas commettre le mal contre la cité; mais elle n'était pas juste, car elle punissait un homme qui n'avait commis aucun mal. Si la majorité rendait juste tout ce qu'elle décide, aucune erreur judiciaire n'existerait, et il faudrait dire que les Athéniens ont eu raison de tuer le plus sage d'entre eux.</p>
+          </div>
+        </div>
+        <div class="pos pos-b"><b class="poslab">Position OUI</b>
+          <div class="arg">
+            <p><b class="la">Argument 1</b> Dans la démocratie athénienne, la loi est au-dessus de tous, et un tribunal populaire de citoyens tirés au sort a jugé Socrate selon les lois de la cité. Socrate reconnaît lui-même cette autorité : condamné, il refuse de fuir la prison pour ne pas se placer au-dessus des lois, et il préfère mourir en restant fidèle à ses principes. Selon les règles que Socrate accepte, la condamnation est justifiée.</p>
+            <p><b class="lo">Objection</b> Socrate obéit à la loi, non au verdict : il distingue le juste du légal, et il déclare la sentence injuste tout en s'y soumettant.</p>
+            <p><b class="lr">Réfutation</b> Dans la démocratie athénienne, il n'existe aucun autre juge de la justice que l'Assemblée et le tribunal populaire : refuser leur verdict, c'est se placer au-dessus des lois, ce que Socrate refuse précisément. S'il avait cru le verdict réellement injuste au point d'être nul, il aurait fui; en acceptant la ciguë, il admet que la cité avait le droit de le juger ainsi.</p>
+          </div>
+          <div class="arg">
+            <p><b class="la">Argument 2</b> Socrate menaçait réellement le régime. Il jugeait la majorité incapable de connaître la justice, il sapait l'autorité des pères et des magistrats devant leurs fils, et cela dans une période de désordre où la démocratie avait besoin de cohésion. Protagoras l'avait prévu : sans respect profond de la convention et de l'harmonie politique, la vie humaine régresse vers le désordre et la guerre perpétuelle.</p>
+            <p><b class="lo">Objection</b> Critiquer les citoyens n'est pas attaquer le régime : Socrate voulait des citoyens vertueux, ce qui est la condition même de la démocratie directe.</p>
+            <p><b class="lr">Réfutation</b> Une démocratie fondée sur le discours ne peut survivre si l'on enseigne à chacun que l'opinion de tous n'est qu'ignorance. L'aporie généralisée, où plus personne ne sait ce qu'il croyait savoir, mène au désordre autant que les décrets des sophistes. La cité avait le droit de se défendre contre celui qui, même de bonne foi, dissolvait les convictions sur lesquelles elle reposait.</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- T8 -->
     <div class="dtheme" id="t8">
       <h4 class="dth-title">Thème 8 · La justice et les lois</h4>
-      <div class="dsavoir"><span class="blabel">Ce qu'il faut pouvoir écrire</span>
+      <div class="dsavoir"><span class="blabel">Ce qu'il faut savoir</span>
         <ul>
-          <li>Socrate distingue le <b>juste</b> et le <b>légal</b>; la justice n'est pas la même chose que les lois; le législateur doit s'appuyer sur la <b>compréhension universelle de la justice</b>; la recherche de la vertu permet à chacun de contribuer à cette justice conventionnelle.</li>
+          <li>Socrate distingue le <b>juste</b> et le <b>légal</b>; le législateur doit s'appuyer sur la <b>compréhension universelle de la justice</b>; les lois sont des <b>copies imparfaites</b> de la justice.</li>
           <li>Définition : « la justice est la vertu qui nous dicte de <b>ne jamais commettre le mal</b> ». « Jamais » est absolu : répondre au mal par le mal nous rend <b>semblables aux méchants</b>; la vengeance est un mal envers <b>nous-mêmes et notre raison</b>; elle rend les méchants <b>encore plus méchants</b>.</li>
-          <li>Donc <b>ne jamais désobéir aux lois</b> : la justice véritable est visée à travers elles; même <b>copies imparfaites</b>, leur désobéir mène au chaos. Socrate se soumet au tribunal malgré l'injustice pour rester fidèle à ses principes et <b>préfère mourir vertueux</b> que de fuir et se placer au-dessus des lois.</li>
-          <li>Contraste : Protagoras (justice = loi, on obéit parce que la majorité l'a voulu), Thrasymaque (on obéit par peur), Calliclès (le fort doit désobéir).</li>
+          <li>Donc <b>ne jamais désobéir aux lois</b> : la justice véritable est visée à travers elles; leur désobéir mène au chaos. Socrate se soumet au tribunal et <b>préfère mourir vertueux</b> que de fuir et se placer au-dessus des lois.</li>
+          <li>Contraste : Protagoras (on obéit parce que la majorité l'a voulu), Thrasymaque (par peur), Antiphon et Calliclès (le fort désobéit).</li>
         </ul></div>
-      <div class="plan" id="p81"><b class="t">Est-il justifié d'aller à l'encontre d'une loi ?</b>
-        <p><b>Thèse :</b> non, pas en secret et pas par la force, même si la loi est injuste. Socrate distingue le juste du légal, il sait donc qu'une loi peut être injuste; mais il soutient que la justice véritable est visée à travers les lois, qui en sont des copies imparfaites, et que leur désobéir mène au chaos et au désordre. Désobéir, c'est se placer au-dessus des lois de la cité, donc commettre le mal contre elle; or la justice est la vertu de ne jamais commettre le mal. Exemple : condamné injustement, Socrate refuse l'évasion que ses amis ont préparée et préfère mourir vertueux.</p>
-        <p><b>Objection :</b> certaines lois sont si injustes que leur obéir, c'est participer au mal. Les lois de ségrégation raciale étaient légales; Rosa Parks les a violées en refusant de céder sa place, et c'est cette désobéissance qui a fait changer la loi. Obéir toujours, c'est laisser le plus fort écrire les lois dans son intérêt, comme le dit Thrasymaque, et se soumettre par peur.</p>
-        <p><b>Réfutation :</b> l'exemple de Rosa Parks ne contredit pas Socrate, il lui ressemble : elle a désobéi ouvertement, sans violence, et elle a accepté d'être arrêtée et jugée. Elle ne s'est pas placée au-dessus des lois, elle a demandé aux lois d'être plus fidèles à la justice, exactement ce que fait Socrate en acceptant sa peine tout en la déclarant injuste. Ce que Socrate refuse, c'est la désobéissance cachée, celle de l'anneau de Gygès, qui ne change aucune loi et ne fait qu'ajouter un mal à un autre. Répondre à l'injustice par une injustice, c'est devenir semblable aux méchants; y répondre en restant juste, c'est la seule façon de rendre la loi meilleure.</p></div>
-      <div class="plan" id="p82"><b class="t">Peut-on répondre au mal par le mal ?</b>
-        <p><b>Thèse :</b> non, jamais. La définition socratique de la justice, ne jamais commettre le mal, donne au mot « jamais » un sens absolu : il n'admet pas d'exception pour celui qui a été victime. En rendant le mal, nous nous montrons non vertueux et semblables aux méchants; nous commettons aussi un mal envers nous-mêmes et notre raison, puisque nous laissons la colère décider à sa place; et nous risquons de rendre les méchants encore plus méchants, car la vengeance appelle la vengeance. Exemple : Socrate, condamné à mort par une cité injuste, ne cherche ni à fuir ni à se venger d'Athènes; il obéit et meurt sans haine.</p>
-        <p><b>Objection :</b> ne pas répondre au mal, c'est l'encourager. Pour Thrasymaque, le faible qui n'ose rien faire n'est pas juste, il a seulement peur, et plus il se soumet, plus le tyran se croit un bienfaiteur. Refuser toute riposte revient à livrer la cité aux plus forts et aux plus cruels.</p>
-        <p><b>Réfutation :</b> refuser de rendre le mal n'est pas refuser d'agir. Socrate n'a jamais cessé de combattre l'injustice : il dénonce publiquement la prétention des puissants, il questionne les sophistes, il défend sa cause au tribunal. Ce qu'il refuse, c'est d'utiliser les armes du méchant, car celui qui les prend cesse d'être juste au moment même où il croit défendre la justice. L'objection suppose que la seule force qui compte est celle du tyran; la vertu-science montre au contraire que le tyran, en faisant le mal, se nuit d'abord à lui-même. La riposte juste consiste à rester juste.</p></div>
+      <div class="plan" id="p8"><b class="t">Est-il justifié d'aller à l'encontre d'une loi injuste ?</b>
+        <p class="alt">Mêmes arguments si le sujet dit : « Socrate a-t-il eu raison d'accepter sa condamnation ? », « Peut-on répondre au mal par le mal ? »</p>
+        <div class="pos pos-a"><b class="poslab">Position NON, conseillée</b>
+          <div class="arg">
+            <p><b class="la">Argument 1</b> Les lois visent la justice, même imparfaitement, et leur désobéir mène au chaos. Socrate distingue le juste du légal, il sait donc qu'une loi peut être injuste; mais il soutient que la justice véritable est visée à travers les lois, qui en sont des copies imparfaites. Désobéir, c'est se placer au-dessus des lois de la cité, donc commettre le mal contre elle, ce que la justice, vertu de ne jamais commettre le mal, interdit. Condamné injustement, Socrate refuse l'évasion que ses amis ont préparée.</p>
+            <p><b class="lo">Objection</b> Certaines lois sont si injustes qu'y obéir, c'est participer au mal. Les lois de ségrégation raciale étaient légales; Rosa Parks les a violées en refusant de céder sa place, et c'est cette désobéissance qui a fait changer la loi.</p>
+            <p><b class="lr">Réfutation</b> L'exemple de Rosa Parks ne contredit pas Socrate, il lui ressemble : elle a désobéi ouvertement, sans violence, et elle a accepté d'être arrêtée et jugée. Elle ne s'est pas placée au-dessus des lois, elle leur a demandé d'être plus fidèles à la justice, exactement ce que fait Socrate en acceptant sa peine tout en la déclarant injuste. Ce que Socrate refuse, c'est la désobéissance cachée de l'anneau de Gygès, qui ne change aucune loi et ajoute un mal à un autre.</p>
+          </div>
+          <div class="arg">
+            <p><b class="la">Argument 2</b> Désobéir au nom de l'injustice subie, c'est répondre au mal par le mal, et le « jamais » de Socrate est absolu. En rendant le mal, nous nous montrons semblables aux méchants; nous commettons un mal envers nous-mêmes et notre raison, puisque la colère décide à notre place; et nous rendons les méchants encore plus méchants, car la riposte appelle la riposte. La vertu-science ajoute que celui qui fait le mal se nuit d'abord à lui-même : la loi injuste abîme la cité, mais la désobéissance abîme l'âme de celui qui désobéit.</p>
+            <p><b class="lo">Objection</b> Thrasymaque répondrait que ne pas riposter, c'est se soumettre par peur : le faible obéit uniquement pour éviter les représailles, et plus il se soumet, plus le tyran se croit un bienfaiteur. Refuser toute désobéissance revient à livrer la cité aux plus forts.</p>
+            <p><b class="lr">Réfutation</b> Refuser de rendre le mal n'est pas refuser d'agir. Socrate n'a jamais cessé de combattre l'injustice : il dénonce publiquement la prétention des puissants, questionne les sophistes, plaide sa cause au tribunal. Ce qu'il refuse, c'est d'utiliser les armes du méchant, car celui qui les prend cesse d'être juste au moment même où il croit défendre la justice. Rester juste face à l'injustice est la seule riposte qui ne détruit pas celui qui la donne.</p>
+          </div>
+        </div>
+        <div class="pos pos-b"><b class="poslab">Position OUI</b>
+          <div class="arg">
+            <p><b class="la">Argument 1</b> Le juste n'est pas le légal, et c'est Socrate lui-même qui le dit. Les lois ne sont que des copies imparfaites de la justice; le législateur doit s'appuyer sur la compréhension universelle de la justice pour les établir. Une loi qui contredit cette justice universelle a perdu ce qui fondait son autorité; lui obéir, c'est préférer la copie à l'original. La loi de ségrégation ou le décret qui condamne un innocent n'obligent pas la conscience.</p>
+            <p><b class="lo">Objection</b> Socrate objecte que même imparfaites, les lois visent la justice, et que leur désobéir mène au chaos et au désordre : désobéir, c'est se placer au-dessus des lois de la cité.</p>
+            <p><b class="lr">Réfutation</b> Socrate n'a pas obéi à tout : devant le tribunal, il déclare qu'il ne cessera jamais de philosopher, quoi que la cité en décide. Désobéir ouvertement à une loi injuste en acceptant la peine ne crée aucun chaos; c'est exactement ce que sa mort a montré, puisqu'elle a fait honte à Athènes et non ruiné ses lois. Le chaos vient de la désobéissance cachée, pas de la désobéissance assumée.</p>
+          </div>
+          <div class="arg">
+            <p><b class="la">Argument 2</b> La loi est une convention, et une convention se change. Protagoras montre que les lois naissent d'un contrat d'entraide et qu'une loi n'est juste que tant que la majorité la croit telle; quand cette croyance change, la loi doit changer, et la désobéissance ouverte est le moyen par lequel une société teste la légitimité de ses lois. Athènes elle-même est née d'une désobéissance : la classe commerçante a refusé le pouvoir arbitraire des aristocrates et exigé des lois écrites.</p>
+            <p><b class="lo">Objection</b> Protagoras conclut pourtant qu'il faut respecter la convention, le plus grand bien, car sans elle la vie humaine régresse vers le désordre et la guerre perpétuelle.</p>
+            <p><b class="lr">Réfutation</b> Respecter la convention, c'est respecter le processus par lequel elle se fait et se défait, non chaque loi figée pour toujours. Une loi maintenue contre la conviction de la majorité n'est plus une convention, c'est la loi du plus fort, précisément ce que Protagoras combat. Désobéir à une telle loi, c'est défendre la convention contre ceux qui l'ont confisquée.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
   <!-- ------------------------------------------------ MODÈLE -->
   <div class="xblock" id="dmo">
-    <h3>3 · Un texte modèle, partie par partie</h3>
-    <div class="xtime">Sujet : « La justice n'est-elle que la loi du plus fort ? » · environ 600 mots, un peu plus long que ce qu'on te demandera sans doute · les étiquettes en marge ne s'écrivent pas dans la copie</div>
-    <div class="modele">
-      <div class="mp"><span class="mlab">Sujet amené</span><p>Au 5<sup>e</sup> siècle avant notre ère, la démocratie athénienne donne la parole à tous les citoyens, et des maîtres de rhétorique, les sophistes, enseignent aux plus ambitieux l'art de persuader la foule. Dans ce contexte, certains d'entre eux en viennent à soutenir que la justice n'est qu'un mot dont se servent les puissants.</p></div>
-      <div class="mp"><span class="mlab">Sujet posé</span><p>On peut donc se demander si la justice se réduit à la loi du plus fort ou si elle désigne autre chose qu'un rapport de force.</p></div>
-      <div class="mp"><span class="mlab">Sujet divisé</span><p>Je soutiendrai, avec Socrate, que la justice est une vertu et non une domination. J'examinerai ensuite l'objection de Thrasymaque, selon laquelle le plus fort fait les lois dans son intérêt, avant de montrer pourquoi cette objection ne tient pas.</p></div>
-      <div class="mp t"><span class="mlab">Thèse : position</span><p>Je soutiens que la justice n'est pas la loi du plus fort. Socrate la définit comme la vertu qui nous dicte de ne jamais commettre le mal.</p></div>
-      <div class="mp t"><span class="mlab">Thèse : argument expliqué</span><p>Cette définition montre que la justice est une qualité de celui qui agit, et non le résultat d'une victoire. En effet, si la justice n'était que la volonté du plus fort, elle changerait de contenu chaque fois qu'un nouveau maître prendrait le pouvoir, et le mot ne désignerait plus rien de stable. Or, lorsque nous appelons un tyran injuste, nous le faisons précisément parce qu'il est le plus fort et qu'il abuse de sa force. Autrement dit, notre jugement suppose un critère de justice qui ne dépend pas de la force. Même Protagoras, pourtant sophiste, reconnaît que les lois sont nées d'un contrat d'entraide mutuelle par lequel les humains ont quitté un état primitif où régnait l'égoïsme sauvage, afin de garantir la sécurité et l'égalité de tous.</p></div>
-      <div class="mp t"><span class="mlab">Thèse : exemple</span><p>On le voit dans la démocratie athénienne elle-même : l'ostracisme, instauré par Clisthène, expulse de la cité le citoyen devenu trop influent. La cité considère donc la force excessive comme une menace pour la justice, et non comme sa source.</p></div>
-      <div class="mp o"><span class="mlab">Objection</span><p>On pourrait cependant m'objecter, avec Thrasymaque dans La République de Platon, que la justice véritable est la loi du plus fort. Selon lui, la loi de la nature est faite de telle manière que le plus fort commande et établit les lois dans son propre intérêt. Le faible n'obéit que pour éviter des représailles, et plus celui qui commande est cruel, plus la foule se soumet et le loue comme un bienfaiteur. Glaucon renforce cette idée par l'histoire du berger de Lydie : muni d'un anneau qui le rend invisible, il commet le mal sans hésiter. La justice ne serait donc qu'un masque posé sur la peur.</p></div>
-      <div class="mp r"><span class="mlab">Réfutation</span><p>Cette objection décrit ce que font certains hommes, mais elle ne dit pas ce qu'est la justice. Que des faibles obéissent par peur ne prouve pas que la loi du fort est juste; cela prouve seulement qu'une loi peut être injuste, ce qui suppose, encore une fois, un critère extérieur à la force. De plus, la vertu-science de Socrate répond à l'anneau de Gygès : celui qui commet le mal, même invisible, rend son âme semblable à celle des méchants et se nuit d'abord à lui-même. S'il connaissait réellement le bien, il n'aurait aucune raison d'utiliser l'anneau, puisque c'est la vertu qui apporte le bonheur. Enfin, Calliclès tire de cette thèse une conséquence qui la condamne : l'homme le plus juste serait le tyran le plus cruel. Une théorie qui ne distingue plus le sage du tyran a perdu le droit de parler de justice.</p></div>
-      <div class="mp"><span class="mlab">Conclusion</span><p>En somme, la justice n'est pas la loi du plus fort, mais la vertu de ne jamais commettre le mal, un critère qui permet justement de juger les puissants. Reste à savoir comment une cité peut former des citoyens capables de cette vertu, question que Socrate a payée de sa vie.</p></div>
+    <h3>3 · Un texte modèle dans ce format exact</h3>
+    <div class="xtime">Sujet : « La justice n'est-elle que la loi du plus fort ? » · position NON · un seul paragraphe de développement, environ 520 mots · les étiquettes colorées ne s'écrivent pas dans la copie</div>
+    <div class="modele2">
+      <p class="mpara"><span class="seg i" data-l="Intro">Au 5<sup>e</sup> siècle avant notre ère, la démocratie athénienne donne la parole à tous les citoyens, et les sophistes enseignent aux plus ambitieux l'art de persuader la foule. Certains en viennent à soutenir que la justice n'est qu'un mot au service des puissants. On peut donc se demander si la justice se réduit à la loi du plus fort. Je soutiendrai que non, pour deux raisons : la justice est une vertu et non une force, et les lois elles-mêmes sont nées pour limiter la force.</span></p>
+      <p class="mpara"><span class="seg a" data-l="Argument 1">Premièrement, la justice est une vertu et non un rapport de force. Socrate la définit comme la vertu qui nous dicte de ne jamais commettre le mal : elle qualifie celui qui agit, non celui qui gagne. Si la justice n'était que la volonté du plus fort, elle changerait de contenu à chaque nouveau maître et le mot ne désignerait plus rien. Or, lorsque nous appelons un tyran injuste, c'est parce qu'il est le plus fort et qu'il abuse; notre jugement suppose donc un critère indépendant de la force.</span> <span class="seg o" data-l="Objection 1">On pourrait m'objecter, avec Thrasymaque dans La République de Platon, que la loi de la nature veut que le plus fort commande et établisse les lois dans son propre intérêt, et que le faible n'obéit que par peur des représailles, au point de louer son tyran comme un bienfaiteur.</span> <span class="seg r" data-l="Réfutation 1">Cependant, cette objection décrit ce que font certains hommes, non ce qu'est la justice. Que des faibles obéissent par peur prouve seulement qu'une loi peut être injuste, ce qui suppose encore un critère extérieur à la force. Calliclès en tire d'ailleurs une conséquence qui condamne la thèse : l'homme le plus juste serait le tyran le plus cruel.</span> <span class="seg a" data-l="Argument 2">Deuxièmement, les lois elles-mêmes sont nées pour limiter la force. Protagoras, pourtant sophiste, explique que les humains ont quitté un état primitif où régnait l'égoïsme sauvage pour conclure un contrat d'entraide mutuelle; depuis, les lois garantissent la sécurité et l'égalité de tous. La justice est donc l'inverse de la loi du plus fort : elle est la convention qui l'empêche. À Athènes, l'ostracisme instauré par Clisthène expulse même le citoyen devenu trop puissant.</span> <span class="seg o" data-l="Objection 2">Certes, Antiphon répond que la loi n'est qu'une invention de la majorité, composée de faibles impuissants à réaliser leurs désirs, qui veulent empêcher les plus forts de les dominer; il serait donc justifié d'y désobéir chaque fois qu'on ne risque pas de se faire prendre.</span> <span class="seg r" data-l="Réfutation 2">Or, si la loi est l'invention des faibles, c'est qu'elle a réussi à limiter la force, ce qui prouve justement que la force n'est pas la justice. Et à celui qui désobéit en cachette, la vertu-science de Socrate répond qu'en commettant le mal, il rend son âme semblable à celle des méchants et se nuit d'abord à lui-même, puisque c'est la vertu qui apporte le bonheur.</span></p>
+      <p class="mpara"><span class="seg c" data-l="Conclusion">En somme, la justice n'est pas la loi du plus fort : elle est la vertu de ne jamais commettre le mal, et les lois existent précisément pour protéger les faibles de la force. Reste à savoir comment une cité forme des citoyens capables de cette vertu, question que Socrate a payée de sa vie.</span></p>
     </div>
+    <p class="dwords" id="dmo-count"></p>
     <div class="retenir">
       <span class="blabel">Ce qui rapporte des points dans ce texte</span>
-      <p>Quatre philosophes nommés avec leur idée exacte (Socrate, Protagoras, Thrasymaque, Glaucon, plus Calliclès). Deux concepts du cours définis dans le texte (la justice, la vertu-science). Une objection présentée avec son raisonnement complet avant d'être réfutée. Aucun point d'exclamation, aucune abréviation, des phrases d'une idée chacune.</p>
+      <p>Deux arguments différents (ce qu'est la justice, puis d'où viennent les lois), chacun avec sa propre objection attribuée à un philosophe (Thrasymaque, Antiphon) et sa propre réfutation. Cinq philosophes nommés avec leur idée exacte. Deux concepts du cours définis (la justice, la vertu-science). Des connecteurs à chaque bloc. Aucun point d'exclamation, aucune abréviation.</p>
     </div>
   </div>
 
   <!-- ------------------------------------------------ ENTRAÎNEMENT -->
   <div class="xblock" id="dpr">
     <h3>4 · S'entraîner</h3>
-    <div class="xtime">Un sujet, un chrono, ton texte, puis la grille d'autocorrection et le plan modèle</div>
+    <div class="xtime">Un sujet, un chrono, ton texte, puis la grille d'autocorrection et les deux positions modèles</div>
     <div class="card" id="d-setup">
-      <div class="field"><label>Sujet</label><select id="d-select"><option value="">Au hasard parmi les 15</option></select></div>
-      <div class="field"><label>Mode</label><div class="chips"><button type="button" class="chip" data-dm="plan" aria-pressed="true">Plan seulement (10 min)</button><button type="button" class="chip" data-dm="texte" aria-pressed="false">Texte complet (60 min)</button></div></div>
+      <div class="field"><label>Sujet</label><select id="d-select"><option value="">Au hasard parmi les 8</option></select></div>
+      <div class="field"><label>Mode</label><div class="chips"><button type="button" class="chip" data-dm="plan" aria-pressed="true">Plan en mots-clés (10 min)</button><button type="button" class="chip" data-dm="texte" aria-pressed="false">Texte complet de 500 mots (90 min)</button></div></div>
       <div class="row"><button type="button" class="btn primary" id="d-start">Commencer</button><span class="stat-line" id="d-hist"></span></div>
     </div>
     <div id="d-work" hidden></div>
@@ -2497,7 +2637,7 @@ route();
 
 // ------------------------------------------------------------------
 // Entraînement à la dissertation : sujet, chrono, brouillon, autocorrection.
-// Les sujets et plans sont lus dans le HTML (#view-dissert .plan).
+// Les sujets et argumentaires sont lus dans le HTML (#view-dissert .plan).
 // ------------------------------------------------------------------
 (function(){
 const KEY='agora-340-dissert';
@@ -2509,6 +2649,7 @@ function load(){ try{ const s=JSON.parse(localStorage.getItem(KEY)||'{}'); retur
 function save(){ try{ localStorage.setItem(KEY,JSON.stringify(st)); }catch(e){} }
 const PLANS=$$('.plan',root).filter(p=>p.id).map(p=>{ const theme=p.closest('.dtheme'); return {id:p.id, q:$('b.t',p).textContent.trim(), theme:theme?$('.dth-title',theme).textContent.replace(/^Thème \d+ · /,'').trim():'', html:p.innerHTML}; });
 const sel=$('#d-select'); PLANS.forEach(p=>{ const o=document.createElement('option'); o.value=p.id; o.textContent=p.q; sel.appendChild(o); });
+const mc=$('#dmo-count'); if(mc){ const n=($('.modele2').innerText.replace(/\b(Intro|Argument \d|Objection \d|Réfutation \d|Conclusion)\b/g,'').match(/\S+/g)||[]).length; mc.textContent='Ce texte fait '+n+' mots, étiquettes exclues.'; }
 let mode='plan';
 $$('#d-setup .chip').forEach(c=>c.addEventListener('click',()=>{ $$('#d-setup .chip').forEach(x=>x.setAttribute('aria-pressed','false')); c.setAttribute('aria-pressed','true'); mode=c.getAttribute('data-dm'); }));
 function hist(){ const n=st.done.length; $('#d-hist').textContent=n?n+' sujet'+(n>1?'s':'')+' déjà travaillé'+(n>1?'s':'')+' sur cet appareil':''; }
@@ -2520,15 +2661,15 @@ $('#d-start').addEventListener('click',()=>{
 });
 function fmt(s){ const m=Math.floor(s/60); s=s%60; return (m<10?'0':'')+m+':'+(s<10?'0':'')+s; }
 function start(p){
-  const limit=mode==='plan'?10*60:60*60;
+  const limit=mode==='plan'?10*60:90*60;
   const work=$('#d-work'); work.hidden=false; $('#d-setup').hidden=true;
-  work.innerHTML='<div class="card"><div class="qhead"><span class="eyebrow">'+(mode==='plan'?'Plan en 10 minutes':'Texte complet en 60 minutes')+' · '+p.theme+'</span><span class="timer" id="d-timer">'+fmt(limit)+'</span></div>'+
+  work.innerHTML='<div class="card"><div class="qhead"><span class="eyebrow">'+(mode==='plan'?'Plan en 10 minutes':'Texte complet en 90 minutes')+' · '+p.theme+'</span><span class="timer" id="d-timer">'+fmt(limit)+'</span></div>'+
     '<div class="qtext">'+p.q+'</div>'+
-    '<p class="stat-line" style="margin:0 0 10px">'+(mode==='plan'?'Écris ta position en une phrase, ton argument en trois lignes avec un exemple et un philosophe, puis l\'objection et la réfutation en deux lignes chacune.':'Rédige le texte au complet : introduction en trois temps, thèse, objection, réfutation, conclusion. Vise 400 à 500 mots.')+'</p>'+
+    '<p class="stat-line" style="margin:0 0 10px">'+(mode==='plan'?'En mots-clés, dans l\'ordre : ta position, argument 1 (avec un philosophe et un exemple), objection 1, réfutation 1, argument 2, objection 2, réfutation 2.':'Rédige le texte au complet : introduction en trois temps, un seul paragraphe de développement (argument 1, objection, réfutation, argument 2, objection, réfutation), conclusion. Vise 480 à 520 mots.')+'</p>'+
     '<textarea id="d-text" placeholder="Ton brouillon reste sur cet appareil.">'+(st.drafts[p.id]||'').replace(/</g,'&lt;')+'</textarea><div class="dwords" id="d-words"></div>'+
     '<div class="row" style="margin-top:12px"><button type="button" class="btn primary" id="d-check">J\'ai fini, je me corrige</button><button type="button" class="btn ghost" id="d-quit">Abandonner</button></div>'+
     '<div id="d-result" hidden></div></div>';
-  const ta=$('#d-text'); const words=()=>{ const n=(ta.value.trim().match(/\S+/g)||[]).length; $('#d-words').textContent=n+' mot'+(n>1?'s':''); };
+  const ta=$('#d-text'); const words=()=>{ const n=(ta.value.trim().match(/\S+/g)||[]).length; $('#d-words').textContent=n+' mot'+(n>1?'s':'')+(mode==='texte'?' sur 500':''); };
   words(); ta.addEventListener('input',()=>{ st.drafts[p.id]=ta.value; save(); words(); });
   const t0=Date.now(); const tm=$('#d-timer');
   if(timer) clearInterval(timer);
@@ -2538,23 +2679,23 @@ function start(p){
   work.scrollIntoView({block:'start'});
 }
 const CHECK=[
-  'Ma position tient en une phrase claire, dès le début de la thèse (« Je soutiens que… »).',
-  'Mon argument est expliqué en plusieurs phrases enchaînées (car, donc, autrement dit), pas énuméré.',
-  'J\'ai défini au moins un concept du cours (vertu-science, convention, doxa, justice…).',
-  'J\'ai donné un exemple concret et je l\'ai relié à ma thèse.',
-  'J\'ai nommé au moins un philosophe avec son idée exacte.',
-  'Mon objection est la meilleure position adverse, attribuée à un philosophe, avec son raisonnement.',
-  'Ma réfutation répond vraiment à l\'objection (prémisse fausse, conséquence absurde ou contre-exemple) et revient à la thèse.',
-  'Introduction en trois temps (amené, posé, divisé) et conclusion de deux phrases.',
-  'Aucun point d\'exclamation, aucun « … », aucune abréviation, aucun mot familier.',
-  'Relu : chaque verbe s\'accorde avec son sujet; ça / sa, a / à, ce / se, son / sont vérifiés.'
+  'Introduction en trois temps : sujet amené, sujet posé, sujet divisé qui annonce ma position et mes deux arguments.',
+  'Argument 1 : expliqué en plusieurs phrases enchaînées (car, en effet, donc), pas énuméré, avec un concept du cours défini.',
+  'Argument 1 : un philosophe nommé avec son idée exacte, et un exemple relié à l\'argument.',
+  'Objection 1 : elle attaque vraiment l\'argument 1, elle est attribuée à un philosophe et contient son raisonnement.',
+  'Réfutation 1 : elle répond à l\'objection (prémisse fausse, conséquence absurde ou contre-exemple) et revient à l\'argument.',
+  'Argument 2 : une raison différente de l\'argument 1, avec philosophe et exemple.',
+  'Objection 2 et réfutation 2 : même exigence que pour le premier bloc.',
+  'Un seul paragraphe de développement, avec les connecteurs (premièrement, on pourrait m\'objecter, cependant, deuxièmement, certes, or).',
+  'Conclusion : ma position et mes deux arguments rappelés, puis une ouverture. Total entre 480 et 520 mots.',
+  'Relu : aucun « ! », aucun « … », aucune abréviation ni mot familier; chaque verbe s\'accorde avec son sujet; ça / sa, a / à, ce / se, son / sont vérifiés.'
 ];
 function showResult(p){
   const r=$('#d-result'); r.hidden=false;
   r.innerHTML='<h4 style="margin-top:22px">Grille d\'autocorrection</h4><ul class="dcheck">'+CHECK.map((c,i)=>'<li><input type="checkbox" id="dc'+i+'"><label for="dc'+i+'">'+c+'</label></li>').join('')+'</ul>'+
     '<p class="stat-line" id="d-score"></p>'+
-    '<div class="model"><span class="blabel">Plan modèle</span>'+p.html.replace(/<b class="t">[\s\S]*?<\/b>/,'')+'</div>'+
-    '<div class="row" style="margin-top:14px"><button type="button" class="btn primary" id="d-next">Autre sujet</button><a class="btn ghost" href="#dth">Relire les thématiques</a></div>';
+    '<div class="model"><span class="blabel">Les deux positions modèles</span><div class="plan" style="border:0;padding:0;margin:0;background:transparent">'+p.html.replace(/<b class="t">[\s\S]*?<\/b>/,'')+'</div></div>'+
+    '<div class="row" style="margin-top:14px"><button type="button" class="btn primary" id="d-next">Autre sujet</button><a class="btn ghost" href="#dth">Relire les sujets</a></div>';
   const upd=()=>{ const n=$$('.dcheck input',r).filter(i=>i.checked).length; $('#d-score').textContent=n+' critère'+(n>1?'s':'')+' sur '+CHECK.length+(n>=9?' : prêt.':n>=7?' : solide, corrige les cases vides.':' : reprends les cases vides avant le prochain sujet.'); };
   $$('.dcheck input',r).forEach(i=>i.addEventListener('change',upd)); upd();
   if(st.done.indexOf(p.id)<0){ st.done.push(p.id); save(); hist(); }
