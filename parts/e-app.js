@@ -28,7 +28,7 @@ function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').rep
 function fmtScore(x){ return (Math.round(x*10)/10).toString().replace('.',','); }
 
 // ---------------- navigation
-const VIEWS=['express','fiches','quiz','exam','cards'];
+const VIEWS=['dissert','express','fiches','quiz','exam','cards'];
 function showView(v){
   VIEWS.forEach(x=>$('#view-'+x).classList.toggle('on',x===v));
   $$('.tab').forEach(t=>t.setAttribute('aria-selected', t.getAttribute('data-view')===v ? 'true':'false'));
@@ -38,9 +38,9 @@ function showView(v){
 }
 $$('.tab').forEach(t=>t.addEventListener('click',()=>{ location.hash='#'+t.getAttribute('data-view'); }));
 function route(){
-  const h=(location.hash||'#express').slice(1);
+  const h=(location.hash||'#dissert').slice(1);
   if(VIEWS.indexOf(h)>=0){ showView(h); if(h==='fiches'||h==='express') window.scrollTo(0,0); return; }
-  if(/^x[a-d]$/.test(h) && $('#'+h)){ showView('express'); setTimeout(()=>{ $('#'+h).scrollIntoView({block:'start'}); },0); return; }
+  const anchor=/^[a-z][a-z0-9_-]*$/i.test(h)?$('#'+h):null; const av=anchor&&anchor.closest('.view'); if(av){ showView(av.id.replace('view-','')); setTimeout(()=>{ anchor.scrollIntoView({block:'start'}); },0); return; }
   if(/^s\d+$/.test(h) && $('#'+h)){ showView('fiches'); $('#toc').classList.remove('open'); setTimeout(()=>{ $('#'+h).scrollIntoView({block:'start'}); },0); return; }
   showView('fiches');
 }

@@ -3,6 +3,10 @@
 Fait le 14 septembre 2026 à partir des 8 PDF du dossier `Grasset Session 1\Philo`
 (Cours 1, 2, 3, 4, 5, 7, Socrate_et_les_sophistes, Guide_de_revision).
 
+## Dissertation (ajoutée le 30 sept. 2026, jour de l'intra)
+
+Onglet « Dissertation », vue par défaut (`parts/g-dissert.html`, CSS dans `parts/a-dissert.css`, moteur d'entraînement dans `parts/h-dissert.js`, clé localStorage `agora-340-dissert`). L'intra vaut 25 % : texte argumentatif partiel, structure imposée thèse / objection / réfutation (cours 11), 8 thématiques. La page donne : le gabarit avec phrases d'amorce, budget de mots et de temps, erreurs relevées par la prof; pour chaque thématique un encadré « ce qu'il faut pouvoir écrire », puis 15 sujets probables avec plan complet (ids p11 à p82); un texte modèle annoté (~600 mots) sur « La justice n'est-elle que la loi du plus fort ? »; un mode d'entraînement (sujet au hasard ou choisi, chrono 10 ou 60 min, brouillon sauvegardé, grille d'autocorrection en 10 critères, plan modèle).
+
 ## Révision express (ajoutée le 16 sept. 2026)
 
 Onglet « Express 25 min », vue par défaut à l'ouverture (`parts/f-express.html`). Tout le contenu condensé selon les trois formats de l'examen : bloc A (7 min, choix multiples : tableau qui/quoi/piège, citations, vrai ou faux pièges), bloc B (10 min, vingt réponses courtes à savoir écrire), bloc C (5 min, méthode + quatre plans de développement + comparaison sophistes/Socrate), bloc D (mini-test de 12 QCM ou 4 courtes tirés de la banque). Chrono intégré qui passe en rouge à 25 min.
